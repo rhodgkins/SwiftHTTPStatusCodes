@@ -3,6 +3,20 @@ Swift enum wrapper for easier handling of HTTP status codes.
 
 All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are supported with a few added ones from the [Wikipedia page](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
+## Usage
+
+With Cocoapods:
+```
+pod 'HTTPStatusCodes', '~> 1.0.0'
+```
+
+In your source file:
+```swift
+import HTTPStatusCodes
+```
+
+Or drop `HTTPStatusCodes.swift` into your project.
+
 ## Helper methods
 
 There are `Bool` properties on the enum for checking if a status code is of a certain category:

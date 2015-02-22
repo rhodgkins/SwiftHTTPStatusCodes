@@ -3,7 +3,7 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod License](http://img.shields.io/cocoapods/l/HTTPStatusCodes.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.0/badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.0)
+[![Dependency Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.1/badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.1)
 [![Reference Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/reference_badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/references)
 
 Swift enum wrapper for easier handling of HTTP status codes.
@@ -14,7 +14,7 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 With Cocoapods:
 ```
-pod 'HTTPStatusCodes', '~> 1.0.0'
+pod 'HTTPStatusCodes', '~> 1.0.1'
 ```
 
 In your source file:

@@ -11,6 +11,7 @@
 		440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */; };
 		440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
 		440D14321A99DD6700EEB60B /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
+		44FD53141A99F79F0075AECD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FD53121A99F7960075AECD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,8 @@
 		440D14331A99DDC900EEB60B /* HTTPStatusCodes.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = HTTPStatusCodes.podspec; path = ../HTTPStatusCodes.podspec; sourceTree = "<group>"; };
 		440D14341A99DDC900EEB60B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		440D14351A99DDC900EEB60B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		440D14361A99E01500EEB60B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		44FD53121A99F7960075AECD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FD53141A99F79F0075AECD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +62,13 @@
 		440D14081A99DD1D00EEB60B = {
 			isa = PBXGroup;
 			children = (
-				440D14331A99DDC900EEB60B /* HTTPStatusCodes.podspec */,
-				440D14341A99DDC900EEB60B /* LICENSE */,
 				440D14351A99DDC900EEB60B /* README.md */,
+				440D14331A99DDC900EEB60B /* HTTPStatusCodes.podspec */,
+				440D14361A99E01500EEB60B /* .travis.yml */,
+				440D14341A99DDC900EEB60B /* LICENSE */,
 				440D14141A99DD1D00EEB60B /* HTTPStatusCodes */,
 				440D14211A99DD1D00EEB60B /* HTTPStatusCodesTests */,
+				44FD53111A99F7870075AECD /* Frameworks */,
 				440D14131A99DD1D00EEB60B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				440D14231A99DD1D00EEB60B /* Info.plist */,
 			);
 			path = HTTPStatusCodesTests;
+			sourceTree = "<group>";
+		};
+		44FD53111A99F7870075AECD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44FD53121A99F7960075AECD /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -11,6 +11,7 @@
 		440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */; };
 		440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
 		440D14321A99DD6700EEB60B /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
+		447ED1D31A99FB7F0070A932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FD53121A99F7960075AECD /* Foundation.framework */; };
 		44FD53141A99F79F0075AECD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FD53121A99F7960075AECD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				447ED1D31A99FB7F0070A932 /* Foundation.framework in Frameworks */,
 				440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

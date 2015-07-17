@@ -36,6 +36,14 @@ class HTTPStatusCodesTests: XCTestCase {
         XCTAssertEqual(response(500).statusCodeValue!, HTTPStatusCode.InternalServerError, "Incorrect status code")
     }
     
+    func testComputedStatusCodeEnumProperty() {
+        XCTAssertEqual(response(100).statusCodeEnum, HTTPStatusCode.Continue, "Incorrect status code")
+        XCTAssertEqual(response(200).statusCodeEnum, HTTPStatusCode.OK, "Incorrect status code")
+        XCTAssertEqual(response(300).statusCodeEnum, HTTPStatusCode.MultipleChoices, "Incorrect status code")
+        XCTAssertEqual(response(400).statusCodeEnum, HTTPStatusCode.BadRequest, "Incorrect status code")
+        XCTAssertEqual(response(500).statusCodeEnum, HTTPStatusCode.InternalServerError, "Incorrect status code")
+    }
+    
     func testHTTPStatusCodeInit() {
         XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(100))!, HTTPStatusCode.Continue, "Incorrect status code")
         XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(200))!, HTTPStatusCode.OK, "Incorrect status code")

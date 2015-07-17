@@ -9,7 +9,7 @@
 import Foundation
 import XCTest
 
-import HTTPStatusCodes
+@testable import HTTPStatusCodes
 
 private func response(statusCode: Int) -> NSHTTPURLResponse {
     return NSHTTPURLResponse(URL: NSURL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!

@@ -3,8 +3,9 @@
 [![Pod Version](http://img.shields.io/cocoapods/v/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod License](http://img.shields.io/cocoapods/l/HTTPStatusCodes.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.1/badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.1)
+[![Dependency Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.1/badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/1.0.2)
 [![Reference Status](https://www.versioneye.com/objective-c/HTTPStatusCodes/reference_badge.svg)](https://www.versioneye.com/objective-c/HTTPStatusCodes/references)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Swift enum wrapper for easier handling of HTTP status codes.
 
@@ -14,7 +15,13 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 With Cocoapods:
 ```
-pod 'HTTPStatusCodes', '~> 1.0.1'
+pod 'HTTPStatusCodes', '~> 1.0.0'
+```
+
+With Carthage:
+
+```ogdl
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 1.0
 ```
 
 In your source file:

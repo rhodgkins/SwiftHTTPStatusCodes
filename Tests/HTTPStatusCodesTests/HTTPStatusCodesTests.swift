@@ -71,4 +71,46 @@ class HTTPStatusCodesTests: XCTestCase {
             }
         }
     }
+    
+    func testReasonPhrase() {
+        XCTAssertEqual(HTTPStatusCode.Continue.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.Continue.rawValue))
+        
+        XCTAssertEqual(HTTPStatusCode.OK.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.OK.rawValue))
+        
+        XCTAssertEqual(HTTPStatusCode.MultipleChoices.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.MultipleChoices.rawValue))
+        
+        XCTAssertEqual(HTTPStatusCode.BadRequest.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.BadRequest.rawValue))
+        
+        XCTAssertEqual(HTTPStatusCode.InternalServerError.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.InternalServerError.rawValue))
+    }
+    
+    func testDescription() {
+        XCTAssertEqual(String(HTTPStatusCode.Continue), "\(HTTPStatusCode.Continue.rawValue) - \(HTTPStatusCode.Continue.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(HTTPStatusCode.OK), "\(HTTPStatusCode.OK.rawValue) - \(HTTPStatusCode.OK.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(HTTPStatusCode.MultipleChoices), "\(HTTPStatusCode.MultipleChoices.rawValue) - \(HTTPStatusCode.MultipleChoices.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(HTTPStatusCode.BadRequest), "\(HTTPStatusCode.BadRequest.rawValue) - \(HTTPStatusCode.BadRequest.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(HTTPStatusCode.InternalServerError), "\(HTTPStatusCode.InternalServerError.rawValue) - \(HTTPStatusCode.InternalServerError.localizedReasonPhrase)")
+    }
+    
+    func testDebugDescription() {
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.Continue), "HTTPStatusCode:\(HTTPStatusCode.Continue.rawValue) - \(HTTPStatusCode.Continue.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.OK), "HTTPStatusCode:\(HTTPStatusCode.OK.rawValue) - \(HTTPStatusCode.OK.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.MultipleChoices), "HTTPStatusCode:\(HTTPStatusCode.MultipleChoices.rawValue) - \(HTTPStatusCode.MultipleChoices.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.BadRequest), "HTTPStatusCode:\(HTTPStatusCode.BadRequest.rawValue) - \(HTTPStatusCode.BadRequest.localizedReasonPhrase)")
+        
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.InternalServerError), "HTTPStatusCode:\(HTTPStatusCode.InternalServerError.rawValue) - \(HTTPStatusCode.InternalServerError.localizedReasonPhrase)")
+    }
+    
+    func testBadStatusCodes() {
+        XCTAssertTrue(HTTPStatusCode(rawValue: 1000) == nil)
+        XCTAssertTrue(HTTPStatusCode(HTTPResponse: nil) == nil)
+        XCTAssertTrue(HTTPStatusCode(HTTPResponse: response(1000)) == nil)
+    }
 }

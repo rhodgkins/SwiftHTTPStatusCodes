@@ -12,7 +12,7 @@ import Foundation
     
     The RF2616 standard is completely covered (http://www.ietf.org/rfc/rfc2616.txt)
  */
-public enum HTTPStatusCode: Int {
+@objc public enum HTTPStatusCode: Int {
     // Informational
     case Continue = 100
     case SwitchingProtocols = 101
@@ -157,6 +157,15 @@ public extension HTTPStatusCode {
 
 public extension NSHTTPURLResponse {
     
+    /**
+     * Marked internal to expose for Objective-C interoperability only.
+     *
+     * - returns: the receiver’s HTTP status code.
+     */
+    @objc var statusCodeEnum: HTTPStatusCode {
+        return HTTPStatusCode(HTTPResponse: self)!
+    }
+    
     /// - returns: the receiver’s HTTP status code.
     public var statusCodeValue: HTTPStatusCode? {
         return HTTPStatusCode(HTTPResponse: self)
@@ -173,6 +182,7 @@ public extension NSHTTPURLResponse {
      * - returns: the instance of the object, or `nil` if an error occurred during initialization.
      */
     @available(iOS, introduced=7.0)
+    @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
     public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
         self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)
     }

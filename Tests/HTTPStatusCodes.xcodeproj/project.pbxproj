@@ -341,9 +341,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HSC_MODULE_NAME = HTTPStatusCodes;
+				HSC_PRODUCT_ID = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
+				HSC_VERSION = 1.1.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = $HSC_PRODUCT_ID;
+				PRODUCT_NAME = $HSC_MODULE_NAME;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -380,8 +385,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HSC_MODULE_NAME = HTTPStatusCodes;
+				HSC_PRODUCT_ID = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
+				HSC_VERSION = 1.1.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = $HSC_PRODUCT_ID;
+				PRODUCT_NAME = $HSC_MODULE_NAME;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -402,8 +412,6 @@
 				INFOPLIST_FILE = "HTTPStatusCodes/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HTTPStatusCodes;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -423,8 +431,6 @@
 				INFOPLIST_FILE = "HTTPStatusCodes/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HTTPStatusCodes;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -443,8 +449,7 @@
 				);
 				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(HSC_MODULE_NAME)Tests";
 			};
 			name = Debug;
 		};
@@ -458,8 +463,7 @@
 				);
 				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(HSC_MODULE_NAME)Tests";
 			};
 			name = Release;
 		};
@@ -481,8 +485,6 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HTTPStatusCodes;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,8 +504,6 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = HTTPStatusCodes;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

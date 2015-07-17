@@ -210,6 +210,8 @@
 		440D14091A99DD1D00EEB60B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Rich H";
 				TargetAttributes = {
@@ -539,6 +541,7 @@
 				44DDD5161B5986C8007A7183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

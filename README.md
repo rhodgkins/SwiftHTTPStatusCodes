@@ -22,6 +22,12 @@ In your source file:
 import HTTPStatusCodes
 ```
 
+With Carthage:
+
+```ogdl
+github "rhodgkins/SwiftHTTPStatusCodes"
+```
+
 Or drop `HTTPStatusCodes.swift` into your project.
 
 ## Helper methods

@@ -45,5 +45,5 @@ isServerError
 There is also an extension on `NSHTTPURLResponse` to obtain a status code enum directly and to `init` with one:
 ```swift
 var statusCodeValue: HTTPStatusCode?
-init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [NSObject : AnyObject]?)
+init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?)
 ```

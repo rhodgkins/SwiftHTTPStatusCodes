@@ -118,9 +118,9 @@ public extension HTTPStatusCode {
         return inRange(500...599)
     }
     
-    /// :returns: true if the status code is in the provided range, false otherwise.
+    /// - returns: true if the status code is in the provided range, false otherwise.
     private func inRange(range: Range<Int>) -> Bool {
-        return contains(range, rawValue)
+        return range.contains(rawValue)
     }
 }
 
@@ -132,7 +132,7 @@ public extension HTTPStatusCode {
 
 // MARK: - Printing
 
-extension HTTPStatusCode: DebugPrintable, Printable {
+extension HTTPStatusCode: CustomDebugStringConvertible, CustomStringConvertible {
     public var description: String {
         return "\(rawValue) - \(localizedReasonPhrase)"
     }
@@ -159,8 +159,8 @@ public extension NSHTTPURLResponse {
         return HTTPStatusCode(HTTPResponse: self)
     }
     
-    @availability(iOS, introduced=7.0)
-    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [NSObject : AnyObject]?) {
+    @available(iOS, introduced=7.0)
+    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
         self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)
     }
 }

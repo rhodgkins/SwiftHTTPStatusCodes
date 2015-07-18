@@ -158,11 +158,11 @@ public extension HTTPStatusCode {
 public extension NSHTTPURLResponse {
     
     /**
-     * Marked internal to expose for Objective-C interoperability only.
+     * Marked internal to expose (as `statusCodeValue`) for Objective-C interoperability only.
      *
      * - returns: the receiver’s HTTP status code.
      */
-    @objc var statusCodeEnum: HTTPStatusCode {
+    @objc(statusCodeValue) var statusCodeEnum: HTTPStatusCode {
         return HTTPStatusCode(HTTPResponse: self)!
     }
     

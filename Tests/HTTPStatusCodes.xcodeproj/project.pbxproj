@@ -13,6 +13,7 @@
 		440D14321A99DD6700EEB60B /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
 		449851FA1B5A381C0081F132 /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */; };
 		449852001B5A38880081F132 /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
+		449852051B5A3D470081F132 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
 		44DDD51B1B598851007A7183 /* HTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 440D14171A99DD1D00EEB60B /* HTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DDD51C1B598854007A7183 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
 /* End PBXBuildFile section */
@@ -375,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449852051B5A3D470081F132 /* HTTPStatusCodes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +717,7 @@
 				449851ED1B5A37710081F132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		449851FD1B5A381C0081F132 /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests-iOS" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +726,7 @@
 				449851FF1B5A381C0081F132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44DDD5141B5986C8007A7183 /* Build configuration list for PBXNativeTarget "HTTPStatusCodes-iOS" */ = {
 			isa = XCConfigurationList;

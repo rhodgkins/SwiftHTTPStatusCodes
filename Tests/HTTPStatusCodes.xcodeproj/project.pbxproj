@@ -11,11 +11,10 @@
 		440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */; };
 		440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
 		440D14321A99DD6700EEB60B /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
-		447ED1D31A99FB7F0070A932 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FD53121A99F7960075AECD /* Foundation.framework */; };
+		449851FA1B5A381C0081F132 /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */; };
+		449852001B5A38880081F132 /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
 		44DDD51B1B598851007A7183 /* HTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 440D14171A99DD1D00EEB60B /* HTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44DDD51C1B598854007A7183 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */; };
-		44DDD51E1B598861007A7183 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44DDD51D1B598861007A7183 /* Foundation.framework */; };
-		44FD53141A99F79F0075AECD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FD53121A99F7960075AECD /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,13 +25,20 @@
 			remoteGlobalIDString = 440D14111A99DD1D00EEB60B;
 			remoteInfo = HTTPStatusCodes;
 		};
+		449851FB1B5A381C0081F132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 440D14091A99DD1D00EEB60B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44DDD5001B5986C8007A7183;
+			remoteInfo = "HTTPStatusCodes-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPStatusCodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D14161A99DD1D00EEB60B /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
 		440D14171A99DD1D00EEB60B /* HTTPStatusCodes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPStatusCodes.h; sourceTree = "<group>"; };
-		440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPStatusCodesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests-OSX.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTTPStatusCodesTests-OSX.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		440D14231A99DD1D00EEB60B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCodesTests.swift; sourceTree = "<group>"; };
 		440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPStatusCodes.swift; path = ../../HTTPStatusCodes.swift; sourceTree = "<group>"; };
@@ -42,10 +48,9 @@
 		440D14361A99E01500EEB60B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		449851E71B5A37710081F132 /* HTTPStatusCodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPStatusCodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		449851F01B5A37BB0081F132 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		449851F51B5A381C0081F132 /* HTTPStatusCodesTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HTTPStatusCodesTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPStatusCodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DDD51A1B5986F2007A7183 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
-		44DDD51D1B598861007A7183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		44FD53121A99F7960075AECD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44FD53141A99F79F0075AECD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				447ED1D31A99FB7F0070A932 /* Foundation.framework in Frameworks */,
 				440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,11 +76,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		449851F21B5A381C0081F132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449851FA1B5A381C0081F132 /* HTTPStatusCodes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44DDD4FD1B5986C8007A7183 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44DDD51E1B598861007A7183 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +103,6 @@
 				440D14341A99DDC900EEB60B /* LICENSE */,
 				440D14141A99DD1D00EEB60B /* HTTPStatusCodes */,
 				440D14211A99DD1D00EEB60B /* HTTPStatusCodesTests */,
-				44FD53111A99F7870075AECD /* Frameworks */,
 				440D14131A99DD1D00EEB60B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,9 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */,
-				440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */,
+				440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests-OSX.xctest */,
 				44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */,
 				449851E71B5A37710081F132 /* HTTPStatusCodes.framework */,
+				449851F51B5A381C0081F132 /* HTTPStatusCodesTests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,15 +138,6 @@
 				440D14231A99DD1D00EEB60B /* Info.plist */,
 			);
 			path = HTTPStatusCodesTests;
-			sourceTree = "<group>";
-		};
-		44FD53111A99F7870075AECD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				44DDD51D1B598861007A7183 /* Foundation.framework */,
-				44FD53121A99F7960075AECD /* Foundation.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +187,9 @@
 			productReference = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests */ = {
+		440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 440D142B1A99DD1D00EEB60B /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests" */;
+			buildConfigurationList = 440D142B1A99DD1D00EEB60B /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests-OSX" */;
 			buildPhases = (
 				440D14191A99DD1D00EEB60B /* Sources */,
 				440D141A1A99DD1D00EEB60B /* Frameworks */,
@@ -199,9 +200,9 @@
 			dependencies = (
 				440D14201A99DD1D00EEB60B /* PBXTargetDependency */,
 			);
-			name = HTTPStatusCodesTests;
+			name = "HTTPStatusCodesTests-OSX";
 			productName = HTTPStatusCodesTests;
-			productReference = 440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */;
+			productReference = 440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests-OSX.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		449851E61B5A37710081F132 /* HTTPStatusCodes-watchOS */ = {
@@ -221,6 +222,24 @@
 			productName = "HTTPStatusCodes-watchOS";
 			productReference = 449851E71B5A37710081F132 /* HTTPStatusCodes.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		449851F41B5A381C0081F132 /* HTTPStatusCodesTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449851FD1B5A381C0081F132 /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests-iOS" */;
+			buildPhases = (
+				449851F11B5A381C0081F132 /* Sources */,
+				449851F21B5A381C0081F132 /* Frameworks */,
+				449851F31B5A381C0081F132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				449851FC1B5A381C0081F132 /* PBXTargetDependency */,
+			);
+			name = "HTTPStatusCodesTests-iOS";
+			productName = "HTTPStatusCodesTests-iOS";
+			productReference = 449851F51B5A381C0081F132 /* HTTPStatusCodesTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		44DDD5001B5986C8007A7183 /* HTTPStatusCodes-iOS */ = {
 			isa = PBXNativeTarget;
@@ -260,6 +279,9 @@
 					449851E61B5A37710081F132 = {
 						CreatedOnToolsVersion = 7.0;
 					};
+					449851F41B5A381C0081F132 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					44DDD5001B5986C8007A7183 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -280,7 +302,8 @@
 				440D14111A99DD1D00EEB60B /* HTTPStatusCodes-OSX */,
 				44DDD5001B5986C8007A7183 /* HTTPStatusCodes-iOS */,
 				449851E61B5A37710081F132 /* HTTPStatusCodes-watchOS */,
-				440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests */,
+				440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests-OSX */,
+				449851F41B5A381C0081F132 /* HTTPStatusCodesTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +324,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		449851E51B5A37710081F132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449851F31B5A381C0081F132 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -340,6 +370,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		449851F11B5A381C0081F132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449852001B5A38880081F132 /* HTTPStatusCodesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		44DDD4FC1B5986C8007A7183 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +393,11 @@
 			isa = PBXTargetDependency;
 			target = 440D14111A99DD1D00EEB60B /* HTTPStatusCodes-OSX */;
 			targetProxy = 440D141F1A99DD1D00EEB60B /* PBXContainerItemProxy */;
+		};
+		449851FC1B5A381C0081F132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44DDD5001B5986C8007A7183 /* HTTPStatusCodes-iOS */;
+			targetProxy = 449851FB1B5A381C0081F132 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -503,7 +546,7 @@
 				);
 				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(HSC_MODULE_NAME)Tests";
+				PRODUCT_NAME = "$(inherited)Tests-OSX";
 			};
 			name = Debug;
 		};
@@ -517,7 +560,7 @@
 				);
 				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(HSC_MODULE_NAME)Tests";
+				PRODUCT_NAME = "$(inherited)Tests-OSX";
 			};
 			name = Release;
 		};
@@ -555,6 +598,31 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		449851FE1B5A381C0081F132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(inherited)Tests-iOS";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		449851FF1B5A381C0081F132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = HTTPStatusCodesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(inherited)Tests-iOS";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -623,7 +691,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		440D142B1A99DD1D00EEB60B /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests" */ = {
+		440D142B1A99DD1D00EEB60B /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests-OSX" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				440D142C1A99DD1D00EEB60B /* Debug */,
@@ -637,6 +705,14 @@
 			buildConfigurations = (
 				449851EC1B5A37710081F132 /* Debug */,
 				449851ED1B5A37710081F132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		449851FD1B5A381C0081F132 /* Build configuration list for PBXNativeTarget "HTTPStatusCodesTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449851FE1B5A381C0081F132 /* Debug */,
+				449851FF1B5A381C0081F132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

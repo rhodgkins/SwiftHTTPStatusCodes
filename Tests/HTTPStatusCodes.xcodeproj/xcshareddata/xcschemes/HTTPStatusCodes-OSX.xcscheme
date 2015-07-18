@@ -30,7 +30,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
                BuildableName = "HTTPStatusCodesTests.xctest"
-               BlueprintName = "HTTPStatusCodesTests"
+               BlueprintName = "HTTPStatusCodesTests-OSX"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -49,7 +49,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
                BuildableName = "HTTPStatusCodesTests.xctest"
-               BlueprintName = "HTTPStatusCodesTests"
+               BlueprintName = "HTTPStatusCodesTests-OSX"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </TestableReference>

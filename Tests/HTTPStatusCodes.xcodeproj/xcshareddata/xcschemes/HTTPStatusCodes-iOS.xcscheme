@@ -33,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
-               BuildableName = "HTTPStatusCodesTests.xctest"
-               BlueprintName = "HTTPStatusCodesTests"
+               BlueprintIdentifier = "449851F41B5A381C0081F132"
+               BuildableName = "HTTPStatusCodesTests-iOS.xctest"
+               BlueprintName = "HTTPStatusCodesTests-iOS"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </TestableReference>

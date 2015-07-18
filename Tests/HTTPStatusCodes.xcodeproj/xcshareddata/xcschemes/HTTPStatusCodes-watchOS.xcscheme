@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "449851E61B5A37710081F132"
-               BuildableName = "HTTPStatusCodes-watchOS.framework"
+               BuildableName = "HTTPStatusCodes.framework"
                BlueprintName = "HTTPStatusCodes-watchOS"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "449851E61B5A37710081F132"
-            BuildableName = "HTTPStatusCodes-watchOS.framework"
+            BuildableName = "HTTPStatusCodes.framework"
             BlueprintName = "HTTPStatusCodes-watchOS"
             ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "449851E61B5A37710081F132"
-            BuildableName = "HTTPStatusCodes-watchOS.framework"
+            BuildableName = "HTTPStatusCodes.framework"
             BlueprintName = "HTTPStatusCodes-watchOS"
             ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
          </BuildableReference>

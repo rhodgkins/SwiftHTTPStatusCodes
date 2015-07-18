@@ -40,6 +40,8 @@
 		440D14341A99DDC900EEB60B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		440D14351A99DDC900EEB60B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		440D14361A99E01500EEB60B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		449851E71B5A37710081F132 /* HTTPStatusCodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPStatusCodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		449851F01B5A37BB0081F132 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPStatusCodes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44DDD51A1B5986F2007A7183 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		44DDD51D1B598861007A7183 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,6 +63,13 @@
 			files = (
 				447ED1D31A99FB7F0070A932 /* Foundation.framework in Frameworks */,
 				440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449851E31B5A37710081F132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +104,7 @@
 				440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */,
 				440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */,
 				44DDD5011B5986C8007A7183 /* HTTPStatusCodes.framework */,
+				449851E71B5A37710081F132 /* HTTPStatusCodes.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +116,7 @@
 				440D14311A99DD6700EEB60B /* HTTPStatusCodes.swift */,
 				44DDD51A1B5986F2007A7183 /* Info-iOS.plist */,
 				440D14161A99DD1D00EEB60B /* Info-OSX.plist */,
+				449851F01B5A37BB0081F132 /* Info-watchOS.plist */,
 			);
 			path = HTTPStatusCodes;
 			sourceTree = "<group>";
@@ -136,6 +147,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				440D14181A99DD1D00EEB60B /* HTTPStatusCodes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449851E41B5A37710081F132 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +204,24 @@
 			productReference = 440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		449851E61B5A37710081F132 /* HTTPStatusCodes-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 449851EE1B5A37710081F132 /* Build configuration list for PBXNativeTarget "HTTPStatusCodes-watchOS" */;
+			buildPhases = (
+				449851E21B5A37710081F132 /* Sources */,
+				449851E31B5A37710081F132 /* Frameworks */,
+				449851E41B5A37710081F132 /* Headers */,
+				449851E51B5A37710081F132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HTTPStatusCodes-watchOS";
+			productName = "HTTPStatusCodes-watchOS";
+			productReference = 449851E71B5A37710081F132 /* HTTPStatusCodes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		44DDD5001B5986C8007A7183 /* HTTPStatusCodes-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44DDD5141B5986C8007A7183 /* Build configuration list for PBXNativeTarget "HTTPStatusCodes-iOS" */;
@@ -221,6 +257,9 @@
 					440D141C1A99DD1D00EEB60B = {
 						CreatedOnToolsVersion = 6.3;
 					};
+					449851E61B5A37710081F132 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					44DDD5001B5986C8007A7183 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -240,6 +279,7 @@
 			targets = (
 				440D14111A99DD1D00EEB60B /* HTTPStatusCodes-OSX */,
 				44DDD5001B5986C8007A7183 /* HTTPStatusCodes-iOS */,
+				449851E61B5A37710081F132 /* HTTPStatusCodes-watchOS */,
 				440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests */,
 			);
 		};
@@ -254,6 +294,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		440D141B1A99DD1D00EEB60B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449851E51B5A37710081F132 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -283,6 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		449851E21B5A37710081F132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +521,43 @@
 			};
 			name = Release;
 		};
+		449851EC1B5A37710081F132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "HTTPStatusCodes/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		449851ED1B5A37710081F132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "HTTPStatusCodes/Info-watchOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		44DDD5151B5986C8007A7183 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -540,6 +631,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		449851EE1B5A37710081F132 /* Build configuration list for PBXNativeTarget "HTTPStatusCodes-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				449851EC1B5A37710081F132 /* Debug */,
+				449851ED1B5A37710081F132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		44DDD5141B5986C8007A7183 /* Build configuration list for PBXNativeTarget "HTTPStatusCodes-iOS" */ = {
 			isa = XCConfigurationList;

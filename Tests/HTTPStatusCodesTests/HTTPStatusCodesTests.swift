@@ -9,7 +9,11 @@
 import Foundation
 import XCTest
 
+#if DEBUG
 @testable import HTTPStatusCodes
+#else
+import HTTPStatusCodes
+#endif
 
 private func response(statusCode: Int) -> NSHTTPURLResponse {
     return NSHTTPURLResponse(URL: NSURL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
@@ -36,6 +40,7 @@ class HTTPStatusCodesTests: XCTestCase {
         XCTAssertEqual(response(500).statusCodeValue!, HTTPStatusCode.InternalServerError, "Incorrect status code")
     }
     
+#if DEBUG
     func testComputedStatusCodeEnumProperty() {
         XCTAssertEqual(response(100).statusCodeEnum, HTTPStatusCode.Continue, "Incorrect status code")
         XCTAssertEqual(response(200).statusCodeEnum, HTTPStatusCode.OK, "Incorrect status code")
@@ -43,7 +48,8 @@ class HTTPStatusCodesTests: XCTestCase {
         XCTAssertEqual(response(400).statusCodeEnum, HTTPStatusCode.BadRequest, "Incorrect status code")
         XCTAssertEqual(response(500).statusCodeEnum, HTTPStatusCode.InternalServerError, "Incorrect status code")
     }
-    
+#endif
+
     func testHTTPStatusCodeInit() {
         XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(100))!, HTTPStatusCode.Continue, "Incorrect status code")
         XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(200))!, HTTPStatusCode.OK, "Incorrect status code")

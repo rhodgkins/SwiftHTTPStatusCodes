@@ -1,3 +1,4 @@
 language: objective-c
 script:
     - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes-OSX clean build test
+    - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes-iOS -destination "platform=iOS Simulator,name=iPhone 6" clean build test

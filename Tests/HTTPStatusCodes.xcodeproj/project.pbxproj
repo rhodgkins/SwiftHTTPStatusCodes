@@ -539,6 +539,7 @@
 				44DDD5161B5986C8007A7183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

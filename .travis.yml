@@ -1,3 +1,4 @@
 language: objective-c
+osx_image: xcode6.4
 script:
     - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes-OSX clean build test

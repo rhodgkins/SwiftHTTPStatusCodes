@@ -99,7 +99,7 @@ public enum HTTPStatusCode : Int {
 public extension HTTPStatusCode {
     /// Informational - Request received, continuing process.
     public var isInformational: Bool {
-        return inRange(100...200)
+        return inRange(100...199)
     }
     /// Success - The action was successfully received, understood, and accepted.
     public var isSuccess: Bool {

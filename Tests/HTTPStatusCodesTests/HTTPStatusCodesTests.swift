@@ -44,7 +44,7 @@ class HTTPStatusCodesTests: XCTestCase {
         XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(500))!, HTTPStatusCode.InternalServerError, "Incorrect status code")
     }
     
-    func testBooleanRangeChecks() {
+    func testValidBooleanRangeChecks() {
         for i in 100...199 {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertTrue(statusCode.isInformational, "Should be informational status code")
@@ -68,6 +68,43 @@ class HTTPStatusCodesTests: XCTestCase {
         for i in 500...599 {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertTrue(statusCode.isServerError, "Should be server error status code")
+            }
+        }
+    }
+    
+    func testInvalidBooleanRangeChecks() {
+        
+        func ranges(rs: Range<Int>...) -> [Int] {
+            var result = [Int]()
+            for r in rs {
+                extend(&result, r)
+            }
+            return result
+        }
+        
+        for i in ranges(0..<100, 200...1000) {
+            if let statusCode = HTTPStatusCode(rawValue: i) {
+                XCTAssertFalse(statusCode.isInformational, "Should be not informational status code")
+            }
+        }
+        for i in ranges(0..<200, 300...1000) {
+            if let statusCode = HTTPStatusCode(rawValue: i) {
+                XCTAssertFalse(statusCode.isSuccess, "Should be not success status code")
+            }
+        }
+        for i in ranges(0..<300, 400...1000) {
+            if let statusCode = HTTPStatusCode(rawValue: i) {
+                XCTAssertFalse(statusCode.isRedirection, "Should be not redirection status code")
+            }
+        }
+        for i in ranges(0..<400, 500...1000) {
+            if let statusCode = HTTPStatusCode(rawValue: i) {
+                XCTAssertFalse(statusCode.isClientError, "Should be not client error status code")
+            }
+        }
+        for i in ranges(0..<500, 600...1000) {
+            if let statusCode = HTTPStatusCode(rawValue: i) {
+                XCTAssertFalse(statusCode.isServerError, "Should be not server error status code")
             }
         }
     }

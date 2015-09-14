@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'HTTPStatusCodes'
-  s.version = '1.0.3'
+  s.version = '2.0.0'
   s.license = 'MIT'
   s.summary = 'Swift enum wrapper for easier handling of HTTP status codes'
   s.homepage = 'https://github.com/rhodgkins/SwiftHTTPStatusCodes'
@@ -10,7 +10,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.9'
-  
+  s.watchos.deployment_target = '2.0'
+
   s.frameworks = 'Foundation'
   s.source_files = 'HTTPStatusCodes.swift'
 

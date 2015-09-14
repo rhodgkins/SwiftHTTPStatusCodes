@@ -1,0 +1,47 @@
+//
+//  HTTPStatusCodes.xcconfig
+//  HTTPStatusCodes
+//
+//  Created by Richard Hodgkins on 14/09/2015.
+//  Copyright © 2015 Rich H. All rights reserved.
+//
+
+// Custom
+
+PRODUCT_NAME                            = HTTPStatusCodes
+PRODUCT_BUNDLE_IDENTIFIER               = uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)
+HSC_VERSION                             = 2.0.0
+
+// Universal Framework
+APPLICATION_EXTENSION_API_ONLY          = YES
+SWIFT_WHOLE_MODULE_OPTIMIZATION         = YES
+
+SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator watchos watchsimulaor
+
+VALID_ARCHS[sdk=iphone*]                = arm64 armv7 armv7s
+VALID_ARCHS[sdk=macosx*]                = i386 x86_64
+VALID_ARCHS[sdk=watch*]                 = armv7k
+
+LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+
+INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-OSX.plist
+INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist
+INFOPLIST_FILE[sdk=watch*]              = $(PROJECT_NAME)/SupportingFiles/Info-watchOS.plist
+
+// Platform-specific
+
+// iOS
+CODE_SIGN_IDENTITY[sdk=iphoneos*]       = iPhone Developer
+IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
+TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
+
+// OS X
+MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]   = 10.10
+FRAMEWORK_VERSION[sdk=macosx*]          = A
+COMBINE_HIDPI_IMAGES[sdk=macosx*]       = YES
+
+// WatchOS
+CODE_SIGN_IDENTITY[sdk=watchos*]        = iPhone Developer
+WATCHOS_DEPLOYMENT_TARGET[sdk=watch*]   = 2.0

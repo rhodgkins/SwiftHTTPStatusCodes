@@ -15,13 +15,13 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 With Cocoapods:
 ```
-pod 'HTTPStatusCodes', '~> 1.0.0'
+pod 'HTTPStatusCodes', '~> 1.1.0'
 ```
 
 With Carthage:
 
 ```ogdl
-github "rhodgkins/SwiftHTTPStatusCodes" ~> 1.0
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 1.1
 ```
 
 In your source file:
@@ -45,5 +45,5 @@ isServerError
 There is also an extension on `NSHTTPURLResponse` to obtain a status code enum directly and to `init` with one:
 ```swift
 var statusCodeValue: HTTPStatusCode?
-init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [NSObject : AnyObject]?)
+init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?)
 ```

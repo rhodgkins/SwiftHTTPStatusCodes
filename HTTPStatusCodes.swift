@@ -12,7 +12,7 @@ import Foundation
     
     The RF2616 standard is completely covered (http://www.ietf.org/rfc/rfc2616.txt)
  */
-public enum HTTPStatusCode : Int {
+@objc public enum HTTPStatusCode: Int {
     // Informational
     case Continue = 100
     case SwitchingProtocols = 101
@@ -118,13 +118,14 @@ public extension HTTPStatusCode {
         return inRange(500...599)
     }
     
-    /// :returns: true if the status code is in the provided range, false otherwise.
+    /// - returns: `true` if the status code is in the provided range, false otherwise.
     private func inRange(range: Range<Int>) -> Bool {
-        return contains(range, rawValue)
+        return range.contains(rawValue)
     }
 }
 
 public extension HTTPStatusCode {
+    /// - returns: a localized string suitable for displaying to users that describes the specified status code.
     public var localizedReasonPhrase: String {
         return NSHTTPURLResponse.localizedStringForStatusCode(rawValue)
     }
@@ -132,7 +133,7 @@ public extension HTTPStatusCode {
 
 // MARK: - Printing
 
-extension HTTPStatusCode: DebugPrintable, Printable {
+extension HTTPStatusCode: CustomDebugStringConvertible, CustomStringConvertible {
     public var description: String {
         return "\(rawValue) - \(localizedReasonPhrase)"
     }
@@ -155,12 +156,34 @@ public extension HTTPStatusCode {
 }
 
 public extension NSHTTPURLResponse {
+    
+    /**
+     * Marked internal to expose (as `statusCodeValue`) for Objective-C interoperability only.
+     *
+     * - returns: the receiver’s HTTP status code.
+     */
+    @objc(statusCodeValue) var statusCodeEnum: HTTPStatusCode {
+        return HTTPStatusCode(HTTPResponse: self)!
+    }
+    
+    /// - returns: the receiver’s HTTP status code.
     public var statusCodeValue: HTTPStatusCode? {
         return HTTPStatusCode(HTTPResponse: self)
     }
     
-    @availability(iOS, introduced=7.0)
-    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [NSObject : AnyObject]?) {
+    /**
+     * Initializer for NSHTTPURLResponse objects.
+     *
+     * - parameter url: the URL from which the response was generated.
+     * - parameter statusCode: an HTTP status code.
+     * - parameter HTTPVersion: the version of the HTTP response as represented by the server.  This is typically represented as "HTTP/1.1".
+     * - parameter headerFields: a dictionary representing the header keys and values of the server response.
+     *
+     * - returns: the instance of the object, or `nil` if an error occurred during initialization.
+     */
+    @available(iOS, introduced=7.0)
+    @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
+    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
         self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)
     }
 }

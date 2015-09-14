@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "449851E61B5A37710081F132"
+               BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
                BuildableName = "HTTPStatusCodes.framework"
-               BlueprintName = "HTTPStatusCodes-watchOS"
+               BlueprintName = "HTTPStatusCodes"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
+               BuildableName = "HTTPStatusCodesTests-OSX.xctest"
+               BlueprintName = "HTTPStatusCodesTests"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,9 +40,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
+               BuildableName = "HTTPStatusCodesTests-OSX.xctest"
+               BlueprintName = "HTTPStatusCodesTests"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
+            BuildableName = "HTTPStatusCodes.framework"
+            BlueprintName = "HTTPStatusCodes"
+            ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "449851E61B5A37710081F132"
+            BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
             BuildableName = "HTTPStatusCodes.framework"
-            BlueprintName = "HTTPStatusCodes-watchOS"
+            BlueprintName = "HTTPStatusCodes"
             ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +97,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "449851E61B5A37710081F132"
+            BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
             BuildableName = "HTTPStatusCodes.framework"
-            BlueprintName = "HTTPStatusCodes-watchOS"
+            BlueprintName = "HTTPStatusCodes"
             ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

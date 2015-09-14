@@ -15,13 +15,13 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 With Cocoapods:
 ```
-pod 'HTTPStatusCodes', '~> 1.1.0'
+pod 'HTTPStatusCodes', '~> 2.0.0'
 ```
 
 With Carthage:
 
 ```ogdl
-github "rhodgkins/SwiftHTTPStatusCodes" ~> 1.1
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 2.0
 ```
 
 In your source file:

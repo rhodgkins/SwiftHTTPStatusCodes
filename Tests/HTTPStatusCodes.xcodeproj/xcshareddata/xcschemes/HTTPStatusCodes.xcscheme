@@ -7,16 +7,30 @@
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
                BuildableName = "HTTPStatusCodes.framework"
                BlueprintName = "HTTPStatusCodes"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
+               BuildableName = "HTTPStatusCodesTests.xctest"
+               BlueprintName = "HTTPStatusCodesTests"
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,6 +43,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
+               BuildableName = "HTTPStatusCodesTests.xctest"
+               BlueprintName = "HTTPStatusCodesTests"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

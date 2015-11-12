@@ -24,7 +24,7 @@ VALID_ARCHS[sdk=watch*]                 = armv7k
 
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks
-LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks
 
 INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-OSX.plist
 INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist

@@ -150,7 +150,6 @@
 				440D14191A99DD1D00EEB60B /* Sources */,
 				440D141A1A99DD1D00EEB60B /* Frameworks */,
 				440D141B1A99DD1D00EEB60B /* Resources */,
-				446C8CDD1BA748A300FFB0E3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -215,22 +214,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		446C8CDD1BA748A300FFB0E3 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		440D140D1A99DD1D00EEB60B /* Sources */ = {
@@ -380,6 +363,7 @@
 				);
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = HTTPStatusCodesTests;
 			};
@@ -392,6 +376,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = HTTPStatusCodesTests;
 			};
 			name = Release;

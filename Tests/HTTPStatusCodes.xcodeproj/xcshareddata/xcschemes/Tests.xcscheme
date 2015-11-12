@@ -20,6 +20,20 @@
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "440D141C1A99DD1D00EEB60B"
+               BuildableName = "HTTPStatusCodesTests.xctest"
+               BlueprintName = "HTTPStatusCodesTests"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

@@ -7,6 +7,12 @@
 //
 
 import Foundation
+
+#if os(watchOS)
+// No testing supported
+@testable import HTTPStatusCodes
+#else
+
 import XCTest
 
 #if DEBUG
@@ -165,3 +171,5 @@ class HTTPStatusCodesTests: XCTestCase {
         XCTAssertTrue(HTTPStatusCode(HTTPResponse: response(1000)) == nil)
     }
 }
+
+#endif

@@ -356,7 +356,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -373,7 +372,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

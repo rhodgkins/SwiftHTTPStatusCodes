@@ -30,6 +30,8 @@ INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-O
 INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist
 INFOPLIST_FILE[sdk=watch*]              = $(PROJECT_NAME)/SupportingFiles/Info-watchOS.plist
 
+COMBINE_HIDPI_IMAGES                    = YES
+
 // Platform-specific
 
 // iOS
@@ -40,7 +42,6 @@ TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
 // OS X
 MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]   = 10.10
 FRAMEWORK_VERSION[sdk=macosx*]          = A
-COMBINE_HIDPI_IMAGES[sdk=macosx*]       = YES
 
 // WatchOS
 CODE_SIGN_IDENTITY[sdk=watchos*]        = iPhone Developer

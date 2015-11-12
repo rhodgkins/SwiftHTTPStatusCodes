@@ -35,6 +35,7 @@
 		440D14351A99DDC900EEB60B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		440D14361A99E01500EEB60B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HTTPStatusCodes.xcconfig; sourceTree = "<group>"; };
+		4497D0A61BF53328006B5223 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-tvOS.plist"; path = "../../../../TVOSTest/TVOSTest/Info-tvOS.plist"; sourceTree = "<group>"; };
 		449852021B5A39140081F132 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		449852031B5A39140081F132 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
 		449852041B5A39140081F132 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				449852021B5A39140081F132 /* Info-iOS.plist */,
+				4497D0A61BF53328006B5223 /* Info-tvOS.plist */,
 				449852031B5A39140081F132 /* Info-OSX.plist */,
 				449852041B5A39140081F132 /* Info-watchOS.plist */,
 			);

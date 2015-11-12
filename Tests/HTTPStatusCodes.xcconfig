@@ -14,7 +14,7 @@ HSC_VERSION                             = 2.0.0
 
 // Universal Framework
 APPLICATION_EXTENSION_API_ONLY          = YES
-SWIFT_WHOLE_MODULE_OPTIMIZATION         = YES
+COMBINE_HIDPI_IMAGES                    = YES
 
 SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator watchos watchsimulator
 
@@ -26,11 +26,9 @@ LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Framewor
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks
 
-INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-OSX.plist
-INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist
+INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist
+INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-OSX.plist
 INFOPLIST_FILE[sdk=watch*]              = $(PROJECT_NAME)/SupportingFiles/Info-watchOS.plist
-
-COMBINE_HIDPI_IMAGES                    = YES
 
 // Platform-specific
 

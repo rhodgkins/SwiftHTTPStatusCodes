@@ -10,26 +10,26 @@
 
 PRODUCT_NAME                            = HTTPStatusCodes
 PRODUCT_BUNDLE_IDENTIFIER               = uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)
-HSC_VERSION                             = 2.0.1
+HSC_VERSION                             = 2.0.2
 
 // Universal Framework
 APPLICATION_EXTENSION_API_ONLY          = YES
 COMBINE_HIDPI_IMAGES                    = YES
 
-SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator tvos tvsimulator watchos watchsimulator
+SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator
 
 VALID_ARCHS[sdk=iphone*]                = arm64 armv7 armv7s
-VALID_ARCHS[sdk=tv*]                    = arm64
+VALID_ARCHS[sdk=appletv*]               = arm64
 VALID_ARCHS[sdk=macosx*]                = i386 x86_64
 VALID_ARCHS[sdk=watch*]                 = armv7k
 
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
-LD_RUNPATH_SEARCH_PATHS[sdk=tv*]        = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
+LD_RUNPATH_SEARCH_PATHS[sdk=appletv*]   = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=watch*]     = $(inherited) @executable_path/Frameworks
 
 INFOPLIST_FILE[sdk=iphone*]             = $(PROJECT_NAME)/SupportingFiles/Info-iOS.plist
-INFOPLIST_FILE[sdk=tv*]                 = $(PROJECT_NAME)/SupportingFiles/Info-tvOS.plist
+INFOPLIST_FILE[sdk=appletv*]            = $(PROJECT_NAME)/SupportingFiles/Info-tvOS.plist
 INFOPLIST_FILE[sdk=macosx*]             = $(PROJECT_NAME)/SupportingFiles/Info-OSX.plist
 INFOPLIST_FILE[sdk=watch*]              = $(PROJECT_NAME)/SupportingFiles/Info-watchOS.plist
 
@@ -41,8 +41,8 @@ IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
 TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
 
 // tvOS
-CODE_SIGN_IDENTITY[sdk=tvos*]           = iPhone Developer
-TVOS_DEPLOYMENT_TARGET[sdk=tvos*]       = 9.0
+CODE_SIGN_IDENTITY[sdk=appletvos*]      = iPhone Developer
+TVOS_DEPLOYMENT_TARGET[sdk=appletvos*]  = 9.0
 
 // OS X
 MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]   = 10.10

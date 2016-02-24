@@ -1,9 +1,9 @@
 # SwiftHTTPStatusCodes
 [![Build Status](https://travis-ci.org/rhodgkins/SwiftHTTPStatusCodes.svg?branch=master)](https://travis-ci.org/rhodgkins/SwiftHTTPStatusCodes)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod Version](http://img.shields.io/cocoapods/v/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/HTTPStatusCodes.svg)](http://cocoadocs.org/docsets/HTTPStatusCodes/)
 [![Pod License](http://img.shields.io/cocoapods/l/HTTPStatusCodes.svg)](http://opensource.org/licenses/MIT)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Swift enum wrapper for easier handling of HTTP status codes. 
 
@@ -13,15 +13,15 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 ## Usage
 
-With Cocoapods:
-```
-pod 'HTTPStatusCodes', '~> 2.0.0'
-```
-
 With Carthage:
 
 ```ogdl
 github "rhodgkins/SwiftHTTPStatusCodes" ~> 2.0
+```
+
+With CocoaPods:
+```ruby
+pod 'HTTPStatusCodes', '~> 2.0.0'
 ```
 
 In your source file:
@@ -29,7 +29,7 @@ In your source file:
 import HTTPStatusCodes
 ```
 
-Or drop `HTTPStatusCodes.swift` into your project.
+Or drop [`HTTPStatusCodes.swift`](https://github.com/rhodgkins/SwiftHTTPStatusCodes/blob/master/HTTPStatusCodes.swift) into your project.
 
 ## Helper methods
 

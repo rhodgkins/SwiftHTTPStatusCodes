@@ -41,8 +41,9 @@ IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
 TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
 
 // tvOS
-CODE_SIGN_IDENTITY[sdk=appletvos*]      = iPhone Developer
-TVOS_DEPLOYMENT_TARGET[sdk=appletvos*]  = 9.0
+CODE_SIGN_IDENTITY[sdk=appletvos*]        = iPhone Developer
+TVOS_DEPLOYMENT_TARGET[sdk=appletv*]    = 9.0
+TARGETED_DEVICE_FAMILY[sdk=appletv*]    = 3
 
 // OS X
 MACOSX_DEPLOYMENT_TARGET[sdk=macosx*]   = 10.10

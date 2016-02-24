@@ -13,7 +13,7 @@ All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are 
 
 ## Usage
 
-With Cocoapods:
+With CocoaPods:
 ```
 pod 'HTTPStatusCodes', '~> 2.0.0'
 ```

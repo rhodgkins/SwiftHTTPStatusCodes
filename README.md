@@ -29,7 +29,7 @@ In your source file:
 import HTTPStatusCodes
 ```
 
-Or drop [`HTTPStatusCodes.swift`](https://github.com/rhodgkins/SwiftHTTPStatusCodes/blob/master/HTTPStatusCodes.swift) into your project.
+Or drop in the Swift files inside the [`Sources folder`](https://github.com/rhodgkins/SwiftHTTPStatusCodes/tree/master/Sources) into your project.
 
 ## Helper methods
 

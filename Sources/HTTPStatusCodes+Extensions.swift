@@ -31,7 +31,7 @@ public extension HTTPStatusCode {
     }
     
     /// - returns: `true` if the status code is in the provided range, false otherwise.
-    private func inRange(range: Range<Int>) -> Bool {
+    private func inRange(range: Range<HTTPStatusCode.RawValue>) -> Bool {
         return range.contains(rawValue)
     }
 }

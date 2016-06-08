@@ -28,7 +28,7 @@ private func response(statusCode: HTTPStatusCode) -> NSHTTPURLResponse {
     return NSHTTPURLResponse(URL: NSURL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
 }
 
-class HTTPStatusCodesTests: XCTestCase {
+final class HTTPStatusCodesTests: XCTestCase {
     
     func testNSHTTPURLResponseInit() {
         XCTAssertEqual(response(.Continue).statusCode, 100, "Incorrect status code")

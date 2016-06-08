@@ -10,7 +10,7 @@
 
 PRODUCT_NAME                            = HTTPStatusCodes
 PRODUCT_BUNDLE_IDENTIFIER               = uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)
-HSC_VERSION                             = 2.0.3
+HSC_VERSION                             = 3.0.0
 
 // Universal Framework
 APPLICATION_EXTENSION_API_ONLY          = YES
@@ -41,7 +41,7 @@ IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
 TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
 
 // tvOS
-CODE_SIGN_IDENTITY[sdk=appletvos*]        = iPhone Developer
+CODE_SIGN_IDENTITY[sdk=appletvos*]      = iPhone Developer
 TVOS_DEPLOYMENT_TARGET[sdk=appletv*]    = 9.0
 TARGETED_DEVICE_FAMILY[sdk=appletv*]    = 3
 

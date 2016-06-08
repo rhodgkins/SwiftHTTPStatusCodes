@@ -10,6 +10,10 @@
 		440D14181A99DD1D00EEB60B /* HTTPStatusCodes.h in Headers */ = {isa = PBXBuildFile; fileRef = 440D14171A99DD1D00EEB60B /* HTTPStatusCodes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		440D141E1A99DD1D00EEB60B /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */; };
 		440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
+		4410E6E11D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */; };
+		442266871D076CA10083A675 /* RegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442266861D076CA10083A675 /* RegressionTests.swift */; };
+		444320471D08CA1D00A6CA18 /* Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 444320461D08C9AC00A6CA18 /* Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		444320491D08CAED00A6CA18 /* Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 444320481D08CAED00A6CA18 /* Deprecated.m */; };
 		44D94E4D1D07387400DC7B50 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D94E4C1D07387400DC7B50 /* HTTPStatusCodes.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +37,11 @@
 		440D14341A99DDC900EEB60B /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		440D14351A99DDC900EEB60B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		440D14361A99E01500EEB60B /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCodes+Extensions.swift"; sourceTree = "<group>"; };
+		4410E6E21D074E7500AC18E6 /* Generator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generator.playground; sourceTree = "<group>"; };
+		442266861D076CA10083A675 /* RegressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionTests.swift; sourceTree = "<group>"; };
+		444320461D08C9AC00A6CA18 /* Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deprecated.h; sourceTree = "<group>"; };
+		444320481D08CAED00A6CA18 /* Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deprecated.m; sourceTree = "<group>"; };
 		446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HTTPStatusCodes.xcconfig; sourceTree = "<group>"; };
 		449852021B5A39140081F132 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		449852031B5A39140081F132 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
@@ -70,6 +79,7 @@
 				440D14341A99DDC900EEB60B /* LICENSE */,
 				446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */,
 				44D94E4E1D0738D600DC7B50 /* Package.swift */,
+				4410E6E21D074E7500AC18E6 /* Generator.playground */,
 				440D14141A99DD1D00EEB60B /* HTTPStatusCodes */,
 				440D14211A99DD1D00EEB60B /* HTTPStatusCodesTests */,
 				440D14131A99DD1D00EEB60B /* Products */,
@@ -89,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				440D14171A99DD1D00EEB60B /* HTTPStatusCodes.h */,
+				444320461D08C9AC00A6CA18 /* Deprecated.h */,
+				444320481D08CAED00A6CA18 /* Deprecated.m */,
 				44D94E4B1D07387400DC7B50 /* Sources */,
 				449852011B5A39140081F132 /* SupportingFiles */,
 			);
@@ -99,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */,
+				442266861D076CA10083A675 /* RegressionTests.swift */,
 				440D14231A99DD1D00EEB60B /* Info.plist */,
 			);
 			path = HTTPStatusCodesTests;
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				44D94E4C1D07387400DC7B50 /* HTTPStatusCodes.swift */,
+				4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */,
 			);
 			name = Sources;
 			path = ../../Sources;
@@ -132,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				440D14181A99DD1D00EEB60B /* HTTPStatusCodes.h in Headers */,
+				444320471D08CA1D00A6CA18 /* Deprecated.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Rich H";
 				TargetAttributes = {
@@ -233,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4410E6E11D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift in Sources */,
 				44D94E4D1D07387400DC7B50 /* HTTPStatusCodes.swift in Sources */,
+				444320491D08CAED00A6CA18 /* Deprecated.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442266871D076CA10083A675 /* RegressionTests.swift in Sources */,
 				440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,12 +359,14 @@
 		440D14291A99DD1D00EEB60B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -355,12 +375,14 @@
 		440D142A1A99DD1D00EEB60B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

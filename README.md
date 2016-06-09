@@ -9,26 +9,36 @@ Swift enum wrapper for easier handling of HTTP status codes.
 
 The purpose of this library is to improve to clarify of code and remove the need for checking of status codes as numbers (`==200`), or as a range of values (`== 2xx`) - instead replacing it with descriptive enums.
 
-All the [RF2616](http://www.ietf.org/rfc/rfc2616.txt) standard status codes are supported with a few added ones from the [Wikipedia page](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+All the [RF2616](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) standard status codes are supported with a few added ones from the [Wikipedia page](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+
+As of version 3.0.0 of this framework, the list of status codes are directly generated from a [online IANA CSV](http://www.iana.org/assignments/http-status-codes/http-status-codes-1.csv). The [HTML page](http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) has a last updated field, and this is also mirrored in the header comments to identify which version this framework is currently using.<br/>
+If this library is out of date compared to this page please open an issue and I will update the list.
 
 ## Usage
 
-With Carthage:
+### Carthage
 
+`Cartfile`:
 ```ogdl
-github "rhodgkins/SwiftHTTPStatusCodes" ~> 2.0
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 3.0
 ```
-
-With CocoaPods:
-```ruby
-pod 'HTTPStatusCodes', '~> 2.0.0'
-```
-
-In your source file:
+Source code:
 ```swift
 import HTTPStatusCodes
 ```
 
+### CocoaPods
+`Podfile`:
+```ruby
+pod 'HTTPStatusCodes', '~> 3.0.0'
+```
+Source code:
+
+```swift
+import HTTPStatusCodes
+```
+
+### Manually
 Or drop in the Swift files inside the [`Sources folder`](https://github.com/rhodgkins/SwiftHTTPStatusCodes/tree/master/Sources) into your project.
 
 ## Helper methods

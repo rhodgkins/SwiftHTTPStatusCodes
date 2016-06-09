@@ -8,32 +8,35 @@
 
 @import Foundation;
 
+/// Used to clean up API, should not be used externally.
+typedef const NSInteger __HTTPStatusCode NS_SWIFT_UNAVAILABLE("");
+
 // MARK: - Deprecated
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestEntityTooLarge instead") HTTPStatusCodeRequestEntityTooLarge __deprecated_enum_msg("Renamed to HTTPStatusCodePayloadTooLarge");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestEntityTooLarge instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodePayloadTooLarge");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestURITooLong instead") HTTPStatusCodeRequestURITooLong __deprecated_enum_msg("Renamed to HTTPStatusCodeURITooLong");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestURITooLong NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestURITooLong instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeURITooLong");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestedRangeNotSatisfiable instead") HTTPStatusCodeRequestedRangeNotSatisfiable __deprecated_enum_msg("Renamed to HTTPStatusCodeRangeNotSatisfiable");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestedRangeNotSatisfiable instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeRangeNotSatisfiable");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.LoginTimeout instead") HTTPStatusCodeLoginTimeout __deprecated_enum_msg("Renamed to HTTPStatusCodeIISLoginTimeout");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeLoginTimeout NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.LoginTimeout instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISLoginTimeout");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RetryWith instead") HTTPStatusCodeRetryWith __deprecated_enum_msg("Renamed to HTTPStatusCodeIISRetryWith");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRetryWith NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RetryWith instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISRetryWith");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoResponse instead") HTTPStatusCodeNoResponse __deprecated_enum_msg("Renamed to HTTPStatusCodeNginxNoResponse");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoResponse NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoResponse instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxNoResponse");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.CertError instead") HTTPStatusCodeCertError __deprecated_enum_msg("Renamed to HTTPStatusCodeNginxSSLCertificateError");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeCertError NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.CertError instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateError");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoCert instead") HTTPStatusCodeNoCert __deprecated_enum_msg("Renamed to HTTPStatusCodeNginxSSLCertificateRequired");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoCert NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoCert instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateRequired");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.HTTPToHTTPS instead") HTTPStatusCodeHTTPToHTTPS __deprecated_enum_msg("Renamed to HTTPStatusCodeNginxHTTPToHTTPS");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeHTTPToHTTPS NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.HTTPToHTTPS instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxHTTPToHTTPS");
 
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.ClientClosedRequest instead") HTTPStatusCodeClientClosedRequest __deprecated_enum_msg("Renamed to HTTPStatusCodeNginxClientClosedRequest");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeClientClosedRequest NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.ClientClosedRequest instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxClientClosedRequest");
 
 /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
 ///
 /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
-FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.TwitterEnhanceYourCalm instead") HTTPStatusCodeTwitterEnhanceYourCalm __deprecated_enum_msg("Renamed to HTTPStatusCodeTooManyRequests");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeTwitterEnhanceYourCalm NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.TwitterEnhanceYourCalm instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeTooManyRequests");
 
 
 // MARK: - Removed
@@ -43,26 +46,26 @@ FOUNDATION_EXTERN const NSInteger NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.Twitt
 /// No longer used. Originally meant "Subsequent requests should use the specified proxy."
 ///
 /// - seealso: [Original draft](https://tools.ietf.org/html/draft-cohen-http-305-306-responses-00)
-FOUNDATION_EXTERN const NSInteger HTTPStatusCodeSwitchProxy NS_UNAVAILABLE;
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeSwitchProxy NS_UNAVAILABLE;
 
 /// Authentication Timeout: 419
 ///
 /// Removed from Wikipedia page.
-FOUNDATION_EXTERN const NSInteger HTTPStatusCodeAuthenticationTimeout NS_UNAVAILABLE;
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeAuthenticationTimeout NS_UNAVAILABLE;
 
 /// Method Failure: 419
 ///
 /// A deprecated response used by the Spring Framework when a method has failed.
 ///
 /// - seealso: [Spring Framework: HttpStatus enum documentation - `METHOD_FAILURE`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpStatus.html#METHOD_FAILURE)
-FOUNDATION_EXTERN const NSInteger HTTPStatusCodeSpringFrameworkMethodFailure NS_UNAVAILABLE;
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeSpringFrameworkMethodFailure NS_UNAVAILABLE;
 
 /// Request Header Too Large: 494
 ///
 /// Removed and replaced with `RequestHeaderFieldsTooLarge` - 431
-FOUNDATION_EXTERN const NSInteger HTTPStatusCodeRequestHeaderTooLarge NS_UNAVAILABLE;
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestHeaderTooLarge NS_UNAVAILABLE;
 
 /// Network Timeout Error: 599
 ///
 /// Removed from Wikipedia page.
-FOUNDATION_EXTERN const NSInteger HTTPStatusCodeNetworkTimeoutError NS_UNAVAILABLE;
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNetworkTimeoutError NS_UNAVAILABLE;

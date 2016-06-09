@@ -12,22 +12,22 @@
 
 // MARK: - Deprecated
 
-const NSInteger HTTPStatusCodeRequestEntityTooLarge = HTTPStatusCodePayloadTooLarge;
-const NSInteger HTTPStatusCodeRequestURITooLong = HTTPStatusCodeURITooLong;
-const NSInteger HTTPStatusCodeRequestedRangeNotSatisfiable = HTTPStatusCodeRangeNotSatisfiable;
-const NSInteger HTTPStatusCodeLoginTimeout = HTTPStatusCodeIISLoginTimeout;
-const NSInteger HTTPStatusCodeRetryWith = HTTPStatusCodeIISRetryWith;
-const NSInteger HTTPStatusCodeNoResponse = HTTPStatusCodeNginxNoResponse;
-const NSInteger HTTPStatusCodeCertError = HTTPStatusCodeNginxSSLCertificateError;
-const NSInteger HTTPStatusCodeNoCert = HTTPStatusCodeNginxSSLCertificateRequired;
-const NSInteger HTTPStatusCodeHTTPToHTTPS = HTTPStatusCodeNginxHTTPToHTTPS;
-const NSInteger HTTPStatusCodeClientClosedRequest = HTTPStatusCodeNginxClientClosedRequest;
-const NSInteger HTTPStatusCodeTwitterEnhanceYourCalm = HTTPStatusCodeTooManyRequests;
+__HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge = HTTPStatusCodePayloadTooLarge;
+__HTTPStatusCode HTTPStatusCodeRequestURITooLong = HTTPStatusCodeURITooLong;
+__HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable = HTTPStatusCodeRangeNotSatisfiable;
+__HTTPStatusCode HTTPStatusCodeLoginTimeout = HTTPStatusCodeIISLoginTimeout;
+__HTTPStatusCode HTTPStatusCodeRetryWith = HTTPStatusCodeIISRetryWith;
+__HTTPStatusCode HTTPStatusCodeNoResponse = HTTPStatusCodeNginxNoResponse;
+__HTTPStatusCode HTTPStatusCodeCertError = HTTPStatusCodeNginxSSLCertificateError;
+__HTTPStatusCode HTTPStatusCodeNoCert = HTTPStatusCodeNginxSSLCertificateRequired;
+__HTTPStatusCode HTTPStatusCodeHTTPToHTTPS = HTTPStatusCodeNginxHTTPToHTTPS;
+__HTTPStatusCode HTTPStatusCodeClientClosedRequest = HTTPStatusCodeNginxClientClosedRequest;
+__HTTPStatusCode HTTPStatusCodeTwitterEnhanceYourCalm = HTTPStatusCodeTooManyRequests;
 
 // MARK: - Removed
 
-const NSInteger HTTPStatusCodeSwitchProxy = 306;
-const NSInteger HTTPStatusCodeAuthenticationTimeout = 419;
-const NSInteger HTTPStatusCodeSpringFrameworkMethodFailure = 419;
-const NSInteger HTTPStatusCodeRequestHeaderTooLarge = 494;
-const NSInteger HTTPStatusCodeNetworkTimeoutError = 599;
+__HTTPStatusCode HTTPStatusCodeSwitchProxy = 306;
+__HTTPStatusCode HTTPStatusCodeAuthenticationTimeout = 419;
+__HTTPStatusCode HTTPStatusCodeSpringFrameworkMethodFailure = 419;
+__HTTPStatusCode HTTPStatusCodeRequestHeaderTooLarge = 494;
+__HTTPStatusCode HTTPStatusCodeNetworkTimeoutError = 599;

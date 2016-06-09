@@ -53,6 +53,16 @@
                ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "442A43951D09513E00807BFA"
+               BuildableName = "ObjectiveCTests.xctest"
+               BlueprintName = "ObjectiveCTests"
+               ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
@@ -94,15 +104,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
-            BuildableName = "HTTPStatusCodes.framework"
-            BlueprintName = "HTTPStatusCodes"
-            ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

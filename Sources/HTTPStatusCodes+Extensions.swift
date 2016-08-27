@@ -31,7 +31,7 @@ public extension HTTPStatusCode {
     }
     
     /// - returns: `true` if the status code is in the provided range, false otherwise.
-    private func inRange(range: Range<HTTPStatusCode.RawValue>) -> Bool {
+    private func inRange(_ range: ClosedRange<HTTPStatusCode.RawValue>) -> Bool {
         return range.contains(rawValue)
     }
 }
@@ -39,7 +39,7 @@ public extension HTTPStatusCode {
 public extension HTTPStatusCode {
     /// - returns: a localized string suitable for displaying to users that describes the specified status code.
     public var localizedReasonPhrase: String {
-        return NSHTTPURLResponse.localizedStringForStatusCode(rawValue)
+        return HTTPURLResponse.localizedString(forStatusCode: rawValue)
     }
 }
 
@@ -59,7 +59,7 @@ extension HTTPStatusCode: CustomDebugStringConvertible, CustomStringConvertible 
 public extension HTTPStatusCode {
     
     /// Obtains a possible status code from an optional HTTP URL response.
-    public init?(HTTPResponse: NSHTTPURLResponse?) {
+    public init?(HTTPResponse: HTTPURLResponse?) {
         guard let statusCodeValue = HTTPResponse?.statusCode else {
             return nil
         }
@@ -67,7 +67,7 @@ public extension HTTPStatusCode {
     }
 }
 
-public extension NSHTTPURLResponse {
+public extension HTTPURLResponse {
     
     /**
      * Marked internal to expose (as `statusCodeValue`) for Objective-C interoperability only.
@@ -93,10 +93,10 @@ public extension NSHTTPURLResponse {
      *
      * - returns: the instance of the object, or `nil` if an error occurred during initialization.
      */
-    @available(iOS, introduced=7.0)
+    @available(iOS, introduced: 7.0)
     @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
-    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
-        self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)
+    public convenience init?(URL url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
+        self.init(url: url, statusCode: statusCode.rawValue, httpVersion: HTTPVersion, headerFields: headerFields)
     }
 }
 
@@ -104,41 +104,41 @@ public extension NSHTTPURLResponse {
 
 public extension HTTPStatusCode {
     
-    @available(*, deprecated, renamed="PayloadTooLarge")
-    static let RequestEntityTooLarge = PayloadTooLarge
+    @available(*, deprecated, renamed: "PayloadTooLarge")
+    static let RequestEntityTooLarge = payloadTooLarge
     
-    @available(*, deprecated, renamed="URITooLong")
-    static let RequestURITooLong = URITooLong
+    @available(*, deprecated, renamed: "URITooLong")
+    static let RequestURITooLong = uriTooLong
     
-    @available(*, deprecated, renamed="RangeNotSatisfiable")
-    static let RequestedRangeNotSatisfiable = RangeNotSatisfiable
+    @available(*, deprecated, renamed: "RangeNotSatisfiable")
+    static let RequestedRangeNotSatisfiable = rangeNotSatisfiable
     
-    @available(*, deprecated, renamed="IISLoginTimeout")
-    static let LoginTimeout = IISLoginTimeout
+    @available(*, deprecated, renamed: "IISLoginTimeout")
+    static let LoginTimeout = iisLoginTimeout
     
-    @available(*, deprecated, renamed="IISRetryWith")
-    static let RetryWith = IISRetryWith
+    @available(*, deprecated, renamed: "IISRetryWith")
+    static let RetryWith = iisRetryWith
     
-    @available(*, deprecated, renamed="NginxNoResponse")
-    static let NoResponse = NginxNoResponse
+    @available(*, deprecated, renamed: "NginxNoResponse")
+    static let NoResponse = nginxNoResponse
     
-    @available(*, deprecated, renamed="NginxSSLCertificateError")
-    static let CertError = NginxSSLCertificateError
+    @available(*, deprecated, renamed: "NginxSSLCertificateError")
+    static let CertError = nginxSSLCertificateError
     
-    @available(*, deprecated, renamed="NginxSSLCertificateRequired")
-    static let NoCert = NginxSSLCertificateRequired
+    @available(*, deprecated, renamed: "NginxSSLCertificateRequired")
+    static let NoCert = nginxSSLCertificateRequired
     
-    @available(*, deprecated, renamed="NginxHTTPToHTTPS")
-    static let HTTPToHTTPS = NginxHTTPToHTTPS
+    @available(*, deprecated, renamed: "NginxHTTPToHTTPS")
+    static let HTTPToHTTPS = nginxHTTPToHTTPS
     
-    @available(*, deprecated, renamed="NginxClientClosedRequest")
-    static let ClientClosedRequest = NginxClientClosedRequest
+    @available(*, deprecated, renamed: "NginxClientClosedRequest")
+    static let ClientClosedRequest = nginxClientClosedRequest
     
     /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
     ///
     /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
-    @available(*, deprecated, renamed="TooManyRequests")
-    static let TwitterEnhanceYourCalm = TooManyRequests
+    @available(*, deprecated, renamed: "TooManyRequests")
+    static let TwitterEnhanceYourCalm = tooManyRequests
 }
 
 // MARK: - Remove cases
@@ -153,13 +153,13 @@ public extension HTTPStatusCode {
     /// No longer used. Originally meant "Subsequent requests should use the specified proxy."
     ///
     /// - seealso: [Original draft](https://tools.ietf.org/html/draft-cohen-http-305-306-responses-00)
-    @available(*, unavailable, message="No longer used")
+    @available(*, unavailable, message: "No longer used")
     static let SwitchProxy = __Unavailable
     
     /// Authentication Timeout: 419
     ///
     /// Removed from Wikipedia page.
-    @available(*, unavailable, message="No longer available")
+    @available(*, unavailable, message: "No longer available")
     static let AuthenticationTimeout = __Unavailable
     
     /// Method Failure: 419
@@ -167,18 +167,18 @@ public extension HTTPStatusCode {
     /// A deprecated response used by the Spring Framework when a method has failed.
     ///
     /// - seealso: [Spring Framework: HttpStatus enum documentation - `METHOD_FAILURE`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpStatus.html#METHOD_FAILURE)
-    @available(*, unavailable, message="Deprecated")
+    @available(*, unavailable, message: "Deprecated")
     static let SpringFrameworkMethodFailure = __Unavailable
     
     /// Request Header Too Large: 494
     ///
     /// Removed and replaced with `RequestHeaderFieldsTooLarge` - 431
-    @available(*, unavailable, renamed="RequestHeaderFieldsTooLarge", message="Changed to a 431 status code")
+    @available(*, unavailable, renamed: "RequestHeaderFieldsTooLarge", message: "Changed to a 431 status code")
     static let RequestHeaderTooLarge = __Unavailable
     
     /// Network Timeout Error: 599
     ///
     /// Removed from Wikipedia page.
-    @available(*, unavailable, message="No longer available")
+    @available(*, unavailable, message: "No longer available")
     static let NetworkTimeoutError = __Unavailable
 }

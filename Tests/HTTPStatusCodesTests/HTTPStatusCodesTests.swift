@@ -21,47 +21,47 @@ import XCTest
 import HTTPStatusCodes
 #endif
 
-private func response(statusCode: Int) -> NSHTTPURLResponse {
-    return NSHTTPURLResponse(URL: NSURL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
+private func response(_ statusCode: Int) -> HTTPURLResponse {
+    return HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
 }
-private func response(statusCode: HTTPStatusCode) -> NSHTTPURLResponse {
-    return NSHTTPURLResponse(URL: NSURL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
+private func response(_ statusCode: HTTPStatusCode) -> HTTPURLResponse {
+    return HTTPURLResponse(URL: URL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
 }
 
 final class HTTPStatusCodesTests: XCTestCase {
     
     func testNSHTTPURLResponseInit() {
-        XCTAssertEqual(response(.Continue).statusCode, 100, "Incorrect status code")
-        XCTAssertEqual(response(.OK).statusCode, 200, "Incorrect status code")
-        XCTAssertEqual(response(.MultipleChoices).statusCode, 300, "Incorrect status code")
-        XCTAssertEqual(response(.BadRequest).statusCode, 400, "Incorrect status code")
-        XCTAssertEqual(response(.InternalServerError).statusCode, 500, "Incorrect status code")
+        XCTAssertEqual(response(.continue).statusCode, 100, "Incorrect status code")
+        XCTAssertEqual(response(.ok).statusCode, 200, "Incorrect status code")
+        XCTAssertEqual(response(.multipleChoices).statusCode, 300, "Incorrect status code")
+        XCTAssertEqual(response(.badRequest).statusCode, 400, "Incorrect status code")
+        XCTAssertEqual(response(.internalServerError).statusCode, 500, "Incorrect status code")
     }
     
     func testComputedStatusCodeValueProperty() {
-        XCTAssertEqual(response(100).statusCodeValue!, HTTPStatusCode.Continue, "Incorrect status code")
-        XCTAssertEqual(response(200).statusCodeValue!, HTTPStatusCode.OK, "Incorrect status code")
-        XCTAssertEqual(response(300).statusCodeValue!, HTTPStatusCode.MultipleChoices, "Incorrect status code")
-        XCTAssertEqual(response(400).statusCodeValue!, HTTPStatusCode.BadRequest, "Incorrect status code")
-        XCTAssertEqual(response(500).statusCodeValue!, HTTPStatusCode.InternalServerError, "Incorrect status code")
+        XCTAssertEqual(response(100).statusCodeValue!, HTTPStatusCode.continue, "Incorrect status code")
+        XCTAssertEqual(response(200).statusCodeValue!, HTTPStatusCode.ok, "Incorrect status code")
+        XCTAssertEqual(response(300).statusCodeValue!, HTTPStatusCode.multipleChoices, "Incorrect status code")
+        XCTAssertEqual(response(400).statusCodeValue!, HTTPStatusCode.badRequest, "Incorrect status code")
+        XCTAssertEqual(response(500).statusCodeValue!, HTTPStatusCode.internalServerError, "Incorrect status code")
     }
     
 #if DEBUG
     func testComputedStatusCodeEnumProperty() {
-        XCTAssertEqual(response(100).statusCodeEnum, HTTPStatusCode.Continue, "Incorrect status code")
-        XCTAssertEqual(response(200).statusCodeEnum, HTTPStatusCode.OK, "Incorrect status code")
-        XCTAssertEqual(response(300).statusCodeEnum, HTTPStatusCode.MultipleChoices, "Incorrect status code")
-        XCTAssertEqual(response(400).statusCodeEnum, HTTPStatusCode.BadRequest, "Incorrect status code")
-        XCTAssertEqual(response(500).statusCodeEnum, HTTPStatusCode.InternalServerError, "Incorrect status code")
+        XCTAssertEqual(response(100).statusCodeEnum, HTTPStatusCode.continue, "Incorrect status code")
+        XCTAssertEqual(response(200).statusCodeEnum, HTTPStatusCode.ok, "Incorrect status code")
+        XCTAssertEqual(response(300).statusCodeEnum, HTTPStatusCode.multipleChoices, "Incorrect status code")
+        XCTAssertEqual(response(400).statusCodeEnum, HTTPStatusCode.badRequest, "Incorrect status code")
+        XCTAssertEqual(response(500).statusCodeEnum, HTTPStatusCode.internalServerError, "Incorrect status code")
     }
 #endif
 
     func testHTTPStatusCodeInit() {
-        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(100))!, HTTPStatusCode.Continue, "Incorrect status code")
-        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(200))!, HTTPStatusCode.OK, "Incorrect status code")
-        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(300))!, HTTPStatusCode.MultipleChoices, "Incorrect status code")
-        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(400))!, HTTPStatusCode.BadRequest, "Incorrect status code")
-        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(500))!, HTTPStatusCode.InternalServerError, "Incorrect status code")
+        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(100))!, HTTPStatusCode.continue, "Incorrect status code")
+        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(200))!, HTTPStatusCode.ok, "Incorrect status code")
+        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(300))!, HTTPStatusCode.multipleChoices, "Incorrect status code")
+        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(400))!, HTTPStatusCode.badRequest, "Incorrect status code")
+        XCTAssertEqual(HTTPStatusCode(HTTPResponse: response(500))!, HTTPStatusCode.internalServerError, "Incorrect status code")
     }
     
     func testValidBooleanRangeChecks() {
@@ -93,36 +93,37 @@ final class HTTPStatusCodesTests: XCTestCase {
     }
     
     func testInvalidBooleanRangeChecks() {
-        
-        func ranges(rs: Range<Int>...) -> [Int] {
+        func ranges<C: Collection>(_ rs: C...) -> [Int] where C.Iterator.Element == Int {
             var result = [Int]()
             for r in rs {
-                result.appendContentsOf(r)
+                r.forEach { i in
+                    result.append(i)
+                }
             }
             return result
         }
         
-        for i in ranges(0..<100, 200...1000) {
+        for i in ranges(0..<100, 200..<1001) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isInformational, "Should be not informational status code")
             }
         }
-        for i in ranges(0..<200, 300...1000) {
+        for i in ranges(0..<200, 300..<1001) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isSuccess, "Should be not success status code")
             }
         }
-        for i in ranges(0..<300, 400...1000) {
+        for i in ranges(0..<300, 400..<1001) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isRedirection, "Should be not redirection status code")
             }
         }
-        for i in ranges(0..<400, 500...1000) {
+        for i in ranges(0..<400, 500..<1001) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isClientError, "Should be not client error status code")
             }
         }
-        for i in ranges(0..<500, 600...1000) {
+        for i in ranges(0..<500, 600..<1001) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isServerError, "Should be not server error status code")
             }
@@ -130,39 +131,39 @@ final class HTTPStatusCodesTests: XCTestCase {
     }
     
     func testReasonPhrase() {
-        XCTAssertEqual(HTTPStatusCode.Continue.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.Continue.rawValue))
+        XCTAssertEqual(HTTPStatusCode.continue.localizedReasonPhrase, HTTPURLResponse.localizedString(forStatusCode: HTTPStatusCode.continue.rawValue))
         
-        XCTAssertEqual(HTTPStatusCode.OK.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.OK.rawValue))
+        XCTAssertEqual(HTTPStatusCode.ok.localizedReasonPhrase, HTTPURLResponse.localizedString(forStatusCode: HTTPStatusCode.ok.rawValue))
         
-        XCTAssertEqual(HTTPStatusCode.MultipleChoices.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.MultipleChoices.rawValue))
+        XCTAssertEqual(HTTPStatusCode.multipleChoices.localizedReasonPhrase, HTTPURLResponse.localizedString(forStatusCode: HTTPStatusCode.multipleChoices.rawValue))
         
-        XCTAssertEqual(HTTPStatusCode.BadRequest.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.BadRequest.rawValue))
+        XCTAssertEqual(HTTPStatusCode.badRequest.localizedReasonPhrase, HTTPURLResponse.localizedString(forStatusCode: HTTPStatusCode.badRequest.rawValue))
         
-        XCTAssertEqual(HTTPStatusCode.InternalServerError.localizedReasonPhrase, NSHTTPURLResponse.localizedStringForStatusCode(HTTPStatusCode.InternalServerError.rawValue))
+        XCTAssertEqual(HTTPStatusCode.internalServerError.localizedReasonPhrase, HTTPURLResponse.localizedString(forStatusCode: HTTPStatusCode.internalServerError.rawValue))
     }
     
     func testDescription() {
-        XCTAssertEqual(String(HTTPStatusCode.Continue), "\(HTTPStatusCode.Continue.rawValue) - \(HTTPStatusCode.Continue.localizedReasonPhrase)")
+        XCTAssertEqual(String(describing: HTTPStatusCode.continue), "\(HTTPStatusCode.continue.rawValue) - \(HTTPStatusCode.continue.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(HTTPStatusCode.OK), "\(HTTPStatusCode.OK.rawValue) - \(HTTPStatusCode.OK.localizedReasonPhrase)")
+        XCTAssertEqual(String(describing: HTTPStatusCode.ok), "\(HTTPStatusCode.ok.rawValue) - \(HTTPStatusCode.ok.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(HTTPStatusCode.MultipleChoices), "\(HTTPStatusCode.MultipleChoices.rawValue) - \(HTTPStatusCode.MultipleChoices.localizedReasonPhrase)")
+        XCTAssertEqual(String(describing: HTTPStatusCode.multipleChoices), "\(HTTPStatusCode.multipleChoices.rawValue) - \(HTTPStatusCode.multipleChoices.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(HTTPStatusCode.BadRequest), "\(HTTPStatusCode.BadRequest.rawValue) - \(HTTPStatusCode.BadRequest.localizedReasonPhrase)")
+        XCTAssertEqual(String(describing: HTTPStatusCode.badRequest), "\(HTTPStatusCode.badRequest.rawValue) - \(HTTPStatusCode.badRequest.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(HTTPStatusCode.InternalServerError), "\(HTTPStatusCode.InternalServerError.rawValue) - \(HTTPStatusCode.InternalServerError.localizedReasonPhrase)")
+        XCTAssertEqual(String(describing: HTTPStatusCode.internalServerError), "\(HTTPStatusCode.internalServerError.rawValue) - \(HTTPStatusCode.internalServerError.localizedReasonPhrase)")
     }
     
     func testDebugDescription() {
-        XCTAssertEqual(String(reflecting: HTTPStatusCode.Continue), "HTTPStatusCode:\(HTTPStatusCode.Continue.rawValue) - \(HTTPStatusCode.Continue.localizedReasonPhrase)")
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.continue), "HTTPStatusCode:\(HTTPStatusCode.continue.rawValue) - \(HTTPStatusCode.continue.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(reflecting: HTTPStatusCode.OK), "HTTPStatusCode:\(HTTPStatusCode.OK.rawValue) - \(HTTPStatusCode.OK.localizedReasonPhrase)")
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.ok), "HTTPStatusCode:\(HTTPStatusCode.ok.rawValue) - \(HTTPStatusCode.ok.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(reflecting: HTTPStatusCode.MultipleChoices), "HTTPStatusCode:\(HTTPStatusCode.MultipleChoices.rawValue) - \(HTTPStatusCode.MultipleChoices.localizedReasonPhrase)")
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.multipleChoices), "HTTPStatusCode:\(HTTPStatusCode.multipleChoices.rawValue) - \(HTTPStatusCode.multipleChoices.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(reflecting: HTTPStatusCode.BadRequest), "HTTPStatusCode:\(HTTPStatusCode.BadRequest.rawValue) - \(HTTPStatusCode.BadRequest.localizedReasonPhrase)")
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.badRequest), "HTTPStatusCode:\(HTTPStatusCode.badRequest.rawValue) - \(HTTPStatusCode.badRequest.localizedReasonPhrase)")
         
-        XCTAssertEqual(String(reflecting: HTTPStatusCode.InternalServerError), "HTTPStatusCode:\(HTTPStatusCode.InternalServerError.rawValue) - \(HTTPStatusCode.InternalServerError.localizedReasonPhrase)")
+        XCTAssertEqual(String(reflecting: HTTPStatusCode.internalServerError), "HTTPStatusCode:\(HTTPStatusCode.internalServerError.rawValue) - \(HTTPStatusCode.internalServerError.localizedReasonPhrase)")
     }
     
     func testBadStatusCodes() {

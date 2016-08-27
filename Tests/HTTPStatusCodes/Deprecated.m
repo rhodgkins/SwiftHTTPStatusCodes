@@ -13,10 +13,10 @@
 // MARK: - Deprecated
 
 __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge = HTTPStatusCodePayloadTooLarge;
-__HTTPStatusCode HTTPStatusCodeRequestURITooLong = HTTPStatusCodeURITooLong;
+__HTTPStatusCode HTTPStatusCodeRequestURITooLong = HTTPStatusCodeUriTooLong;
 __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable = HTTPStatusCodeRangeNotSatisfiable;
-__HTTPStatusCode HTTPStatusCodeLoginTimeout = HTTPStatusCodeIISLoginTimeout;
-__HTTPStatusCode HTTPStatusCodeRetryWith = HTTPStatusCodeIISRetryWith;
+__HTTPStatusCode HTTPStatusCodeLoginTimeout = HTTPStatusCodeIisLoginTimeout;
+__HTTPStatusCode HTTPStatusCodeRetryWith = HTTPStatusCodeIisRetryWith;
 __HTTPStatusCode HTTPStatusCodeNoResponse = HTTPStatusCodeNginxNoResponse;
 __HTTPStatusCode HTTPStatusCodeCertError = HTTPStatusCodeNginxSSLCertificateError;
 __HTTPStatusCode HTTPStatusCodeNoCert = HTTPStatusCodeNginxSSLCertificateRequired;

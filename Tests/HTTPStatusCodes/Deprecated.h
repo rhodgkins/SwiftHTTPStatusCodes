@@ -15,7 +15,7 @@ typedef const NSInteger __HTTPStatusCode NS_SWIFT_UNAVAILABLE("");
 
 FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestEntityTooLarge instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodePayloadTooLarge");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestUriTooLong NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestUriTooLong instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeUriTooLong");
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestURITooLong NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestURITooLong instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeURITooLong");
 
 FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestedRangeNotSatisfiable instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeRangeNotSatisfiable");
 

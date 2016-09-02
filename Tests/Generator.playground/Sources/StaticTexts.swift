@@ -72,21 +72,6 @@ public let EnumDeclarationStart = "@objc public enum \(EnumName): Int {"
 
 public let EnumDeclarationEnd = "}"
 
-public let EnumExtension = text(
-    "internal extension \(EnumName) {",
-        "\t" +
-        "/// Hide from Objective-C to prevent duplicate symbols.",
-        "\t" +
-        "/// For some reason this needs to be delcared when having an extension on the enum in a different file.",
-        "\t" +
-        "init?(_ rawValue: Int) {",
-            "\t\t" +
-            "self.init(rawValue: rawValue)",
-        "\t" +
-        "}",
-    "}"
-)
-
 /// Allows conversions of special cases defined in the RFC spec.
 let SpecialCaseNameLookup: [Int: String] = [
     :

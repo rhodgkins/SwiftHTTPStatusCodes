@@ -110,5 +110,4 @@ if let (lastUpdated, allCases) = fetchCSV() {
     print(cases.sorted().map({ String(describing: $0) }).joined(separator: "\n\n"))
     print(EnumDeclarationEnd)
     print()
-    print(EnumExtension)
 }

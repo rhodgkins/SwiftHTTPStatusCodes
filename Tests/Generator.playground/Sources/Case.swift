@@ -33,26 +33,6 @@ extension Case: Hashable, Comparable, CustomStringConvertible {
     public static func <(lhs: Case, rhs: Case) -> Bool { return lhs.code < rhs.code }
 }
 
-
-struct Deprecated {
-    let renamedTo: String?
-    
-    init(renamedTo: String? = nil) {
-        self.renamedTo = renamedTo
-    }
-}
-
-extension Deprecated: CustomStringConvertible {
-    var description: String {
-        var s = "@available(*, deprecated"
-        if let renamedTo = renamedTo {
-            s += ", renamed: \"\(renamedTo)\")"
-        }
-        s += ")"
-        return "\t\(s)"
-    }
-}
-
 private extension String {
     
     func lowercasedFirstCharacter() -> String {

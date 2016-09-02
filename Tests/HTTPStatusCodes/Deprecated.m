@@ -13,7 +13,7 @@
 // MARK: - Deprecated
 
 __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge = HTTPStatusCodePayloadTooLarge;
-__HTTPStatusCode HTTPStatusCodeRequestURITooLong = HTTPStatusCodeURITooLong;
+__HTTPStatusCode HTTPStatusCodeRequestUriTooLong = HTTPStatusCodeUriTooLong;
 __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable = HTTPStatusCodeRangeNotSatisfiable;
 __HTTPStatusCode HTTPStatusCodeLoginTimeout = HTTPStatusCodeIISLoginTimeout;
 __HTTPStatusCode HTTPStatusCodeRetryWith = HTTPStatusCodeIISRetryWith;

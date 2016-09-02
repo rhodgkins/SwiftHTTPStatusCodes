@@ -93,7 +93,7 @@ public extension NSHTTPURLResponse {
      *
      * - returns: the instance of the object, or `nil` if an error occurred during initialization.
      */
-    @available(iOS, introduced=7.0)
+    @available(iOS, introduced: 7.0)
     @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
     public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
         self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)

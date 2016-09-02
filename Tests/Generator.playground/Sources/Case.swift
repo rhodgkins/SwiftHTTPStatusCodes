@@ -46,7 +46,7 @@ extension Deprecated: CustomStringConvertible {
     var description: String {
         var s = "@available(*, deprecated"
         if let renamedTo = renamedTo {
-            s += ", renamed=\"\(renamedTo)\")"
+            s += ", renamed: \"\(renamedTo)\")"
         }
         s += ")"
         return "\t\(s)"

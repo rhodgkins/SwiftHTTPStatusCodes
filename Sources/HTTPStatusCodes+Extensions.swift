@@ -39,7 +39,7 @@ public extension HTTPStatusCode {
 public extension HTTPStatusCode {
     /// - returns: a localized string suitable for displaying to users that describes the specified status code.
     public var localizedReasonPhrase: String {
-        return NSHTTPURLResponse.localizedStringForStatusCode(rawValue)
+        return HTTPURLResponse.localizedString(forStatusCode: rawValue)
     }
 }
 
@@ -59,7 +59,7 @@ extension HTTPStatusCode: CustomDebugStringConvertible, CustomStringConvertible 
 public extension HTTPStatusCode {
     
     /// Obtains a possible status code from an optional HTTP URL response.
-    public init?(HTTPResponse: NSHTTPURLResponse?) {
+    public init?(HTTPResponse: HTTPURLResponse?) {
         guard let statusCodeValue = HTTPResponse?.statusCode else {
             return nil
         }
@@ -67,7 +67,7 @@ public extension HTTPStatusCode {
     }
 }
 
-public extension NSHTTPURLResponse {
+public extension HTTPURLResponse {
     
     /**
      * Marked internal to expose (as `statusCodeValue`) for Objective-C interoperability only.
@@ -95,8 +95,8 @@ public extension NSHTTPURLResponse {
      */
     @available(iOS, introduced: 7.0)
     @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
-    public convenience init?(URL url: NSURL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
-        self.init(URL: url, statusCode: statusCode.rawValue, HTTPVersion: HTTPVersion, headerFields: headerFields)
+    public convenience init?(url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
+        self.init(url: url, statusCode: statusCode.rawValue, httpVersion: HTTPVersion, headerFields: headerFields)
     }
 }
 

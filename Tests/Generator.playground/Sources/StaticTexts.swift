@@ -42,6 +42,8 @@ private let Year: String = {
     return formatter.string(from: Foundation.Date())
 }()
 
+let EnumName = "HTTPStatusCode"
+
 public let FileHeader = makeLinesIntoComment(lines:
     "",
     "HTTPStatusCodes.swift",
@@ -66,12 +68,12 @@ public func createEnumHeaderComment(lastUpdated: String) -> String {
     )
 }
 
-public let EnumDeclarationStart = "@objc public enum HTTPStatusCode: Int {"
+public let EnumDeclarationStart = "@objc public enum \(EnumName): Int {"
 
 public let EnumDeclarationEnd = "}"
 
 public let EnumExtension = text(
-    "internal extension HTTPStatusCode {",
+    "internal extension \(EnumName) {",
         "\t" +
         "/// Hide from Objective-C to prevent duplicate symbols.",
         "\t" +
@@ -86,8 +88,8 @@ public let EnumExtension = text(
 )
 
 /// Allows conversions of special cases defined in the RFC spec.
-let SpecialCaseNameLookup = [
-    418 : "Im A Teapot"
+let SpecialCaseNameLookup: [Int: String] = [
+    :
 ]
 
 public let ExtraCases = [
@@ -95,7 +97,7 @@ public let ExtraCases = [
     // MARK: RFC
     
     Case(code: 418,
-         name: "ImATeapot",
+         name: "I'm A Teapot",
      comments:
         "Returned by tea pots requested to brew coffee",
         "",

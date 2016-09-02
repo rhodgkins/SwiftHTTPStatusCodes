@@ -3,6 +3,7 @@ public struct Case {
     let name: String
     let comments: [String]
     let caseName: String
+    let objCCaseName: String?
     
     init(code: Int, name: String, comments: String...) {
         self.init(code: code, name: name, comments: comments)
@@ -12,23 +13,34 @@ public struct Case {
         self.code = code
         self.name = name
         self.comments = ["\(name): \(code)", ""] + comments
+        // Remove all non code print characters
         let identifiers = (SpecialCaseNameLookup[code] ?? name).replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ")
-        let caseName = identifiers.enumerated().map {
-            // Match Swift 3.0 enum case naming convention
-            return $0 == identifiers.startIndex ? $1.lowercasedFirstCharacter() : $1.uppercasedFirstCharacter()
-        }.joined(separator: "")
+        
+        // Must always have at least 1 value for the identifiers
+        let prefix = identifiers.first!
+        // Match Swift 3.0 enum case naming convention
+        let swiftCaseNamePrefix = prefix.lowercased()
+        let swiftCaseNameSuffix = (identifiers.count > 1 ? identifiers.suffix(from: 1).map { $0.uppercasedFirstCharacter() } : []).joined(separator: "")
+        
+        let swiftCaseName = swiftCaseNamePrefix + swiftCaseNameSuffix
+        // Keep acronyms if its the first identifier
+        objCCaseName = prefix.uppercased() == prefix ? (prefix + swiftCaseNameSuffix) : nil
+        
         // Escape special case names
-        self.caseName = UnsafeCaseNames.contains(caseName) ? "`\(caseName)`" : caseName
+        caseName = UnsafeCaseNames.contains(swiftCaseName) ? "`\(swiftCaseName)`" : swiftCaseName
     }
 }
 
 extension Case: Hashable, Comparable, CustomStringConvertible {
     public var hashValue: Int { return code.hashValue }
+    
     public var description: String {
-        return text(
-            makeLinesIntoDocComment(lines: comments, prefix: "\t"),
-            "\tcase \(caseName) = \(code)"
-        )
+        var lines = [makeLinesIntoDocComment(lines: comments, prefix: "\t")]
+        if let objCCaseName = objCCaseName {
+            lines.append("\t@objc(\(EnumName)\(objCCaseName))")
+        }
+        lines.append("\tcase \(caseName) = \(code)")
+        return text(lines)
     }
     
     public static func ==(lhs: Case, rhs: Case) -> Bool { return lhs.code == rhs.code }
@@ -40,7 +52,7 @@ private extension String {
     func lowercasedFirstCharacter() -> String {
         let firstCharacter = String(self[startIndex])
         let rest = substring(from: index(after: startIndex))
-        return firstCharacter.lowercased() + rest.lowercased()
+        return firstCharacter.lowercased() + rest
     }
     
     func uppercasedFirstCharacter() -> String {

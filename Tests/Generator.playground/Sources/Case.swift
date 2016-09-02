@@ -12,24 +12,23 @@ public struct Case {
         self.code = code
         self.name = name
         self.comments = ["\(name): \(code)", ""] + comments
-        caseName = name.stringByReplacingOccurrencesOfString("[^a-z0-9 ]", withString: "", options: [.CaseInsensitiveSearch, .RegularExpressionSearch]).componentsSeparatedByString(" ").map {
-            String($0[$0.startIndex]).uppercaseString + $0.substringFromIndex($0.startIndex.advancedBy(1))
-        }.joinWithSeparator("")
+        caseName = name.replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ").map { $0.uppercasedFirstCharacter() }.joined(separator: "")
     }
 }
 
 extension Case: Hashable, Comparable, CustomStringConvertible {
     public var hashValue: Int { return code.hashValue }
     public var description: String {
-        return [
-            makeLinesIntoDocComment(comments, prefix: "\t"),
+        return text(
+            makeLinesIntoDocComment(lines: comments, prefix: "\t"),
             "\tcase \(caseName) = \(code)"
-        ].joinWithSeparator("\n")
+        )
     }
+    
+    public static func ==(lhs: Case, rhs: Case) -> Bool { return lhs.code == rhs.code }
+    public static func <(lhs: Case, rhs: Case) -> Bool { return lhs.code < rhs.code }
 }
 
-public func ==(lhs: Case, rhs: Case) -> Bool { return lhs.code == rhs.code }
-public func <(lhs: Case, rhs: Case) -> Bool { return lhs.code < rhs.code }
 
 struct Deprecated {
     let renamedTo: String?
@@ -47,5 +46,14 @@ extension Deprecated: CustomStringConvertible {
         }
         s += ")"
         return "\t\(s)"
+    }
+}
+
+private extension String {
+    
+    func uppercasedFirstCharacter() -> String {
+        let firstCharacter = String(self[startIndex])
+        let rest = substring(from: index(after: startIndex))
+        return firstCharacter.uppercased() + rest
     }
 }

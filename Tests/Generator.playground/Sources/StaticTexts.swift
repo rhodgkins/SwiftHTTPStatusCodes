@@ -1,10 +1,10 @@
 import Foundation
 
-func text(lines: [String]) -> String {
-    return lines.joinWithSeparator("\n")
+func text(_ lines: [String]) -> String {
+    return lines.joined(separator: "\n")
 }
 
-private func text(lines: String...) -> String {
+func text(_ lines: String...) -> String {
     return text(lines)
 }
 
@@ -13,7 +13,7 @@ func makeLinesIntoDocComment(lines: [String], prefix: String = "") -> String {
 }
 
 func makeLinesIntoDocComment(prefix: String = "", lines: String...) -> String {
-    return makeLinesIntoDocComment(lines, prefix: prefix)
+    return makeLinesIntoDocComment(lines: lines, prefix: prefix)
 }
 
 private func makeLinesIntoComment(lines: String...) -> String {
@@ -28,21 +28,21 @@ func createLink(text: String? = nil, link: String) -> String {
 }
 
 public func createSeeAlso(text: String? = nil, link: String) -> String {
-    return "- seealso: \(createLink(text, link: link))"
+    return "- seealso: \(createLink(text: text, link: link))"
 }
 
 private let Date: String = {
-    let formatter = NSDateFormatter()
+    let formatter = DateFormatter()
     formatter.dateFormat = "dd/MM/yyyy"
-    return formatter.stringFromDate(NSDate())
+    return formatter.string(from: Foundation.Date())
 }()
 private let Year: String = {
-    let formatter = NSDateFormatter()
+    let formatter = DateFormatter()
     formatter.dateFormat = "yyyy"
-    return formatter.stringFromDate(NSDate())
+    return formatter.string(from: Foundation.Date())
 }()
 
-public let FileHeader = makeLinesIntoComment(
+public let FileHeader = makeLinesIntoComment(lines:
     "",
     "HTTPStatusCodes.swift",
     "",
@@ -57,12 +57,12 @@ public let Imports = text(
 
 public func createEnumHeaderComment(lastUpdated: String) -> String {
     return makeLinesIntoDocComment(lines:
-        "HTTP status codes as per the \(createLink("IANA HTTP status code registry", link: "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml")).",
+        "HTTP status codes as per the \(createLink(text: "IANA HTTP status code registry", link: "http://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml")).",
         "",
         "Last updated: \(lastUpdated)",
         "",
-        "- seealso: \(createLink("Wikipedia page - List of HTTP status codes", link: "http://en.wikipedia.org/wiki/List_of_HTTP_status_codes"))",
-        "- seealso: \(createLink("HTTP protocol standard - Status Code Definitions", link: "https://tools.ietf.org/html/rfc2616#section-10"))"
+        "- seealso: \(createLink(text: "Wikipedia page - List of HTTP status codes", link: "http://en.wikipedia.org/wiki/List_of_HTTP_status_codes"))",
+        "- seealso: \(createLink(text: "HTTP protocol standard - Status Code Definitions", link: "https://tools.ietf.org/html/rfc2616#section-10"))"
     )
 }
 
@@ -94,7 +94,7 @@ public let ExtraCases = [
      comments:
         "Returned by tea pots requested to brew coffee",
         "",
-        createSeeAlso("RFC 2324", link: "http://www.iana.org/go/rfc2324")
+        createSeeAlso(text: "RFC 2324", link: "http://www.iana.org/go/rfc2324")
     ),
     
     // MARK: ISS
@@ -106,7 +106,7 @@ public let ExtraCases = [
         "",
         "**Category**: Internet Information Services",
         "",
-        createSeeAlso("Error message when you try to log on to Exchange 2007 by using Outlook Web Access: \"440 Login Timeout\"", link: "http://support.microsoft.com/kb/941201/en-us")
+        createSeeAlso(text: "Error message when you try to log on to Exchange 2007 by using Outlook Web Access: \"440 Login Timeout\"", link: "http://support.microsoft.com/kb/941201/en-us")
     ),
     Case(code: 449,
         name: "IIS Retry With",
@@ -115,7 +115,7 @@ public let ExtraCases = [
         "",
         "**Category**: Internet Information Services",
         "",
-        createSeeAlso("2.2.6 449 Retry With Status Code", link: "https://msdn.microsoft.com/en-us/library/dd891478.aspx")
+        createSeeAlso(text: "2.2.6 449 Retry With Status Code", link: "https://msdn.microsoft.com/en-us/library/dd891478.aspx")
     ),
     
     // MARK: ngnix
@@ -171,14 +171,14 @@ public let ExtraCases = [
     Case(code: 498,
          name: "Token Expired",
      comments:
-        "Returned by \(createLink("ArcGIS for Server", link: "https://en.wikipedia.org/wiki/ArcGIS_Server")). A code of 498 indicates an expired or otherwise invalid token.",
+        "Returned by \(createLink(text: "ArcGIS for Server", link: "https://en.wikipedia.org/wiki/ArcGIS_Server")). A code of 498 indicates an expired or otherwise invalid token.",
         "",
-        createSeeAlso("Using token-based authentication", link: "http://help.arcgis.com/en/arcgisserver/10.0/apis/soap/index.htm#Using_token_authentication.htm")
+        createSeeAlso(text: "Using token-based authentication", link: "http://help.arcgis.com/en/arcgisserver/10.0/apis/soap/index.htm#Using_token_authentication.htm")
     ),
     Case(code: 530,
          name: "Site is frozen",
      comments:
-        "Used by the \(createLink("Pantheon", link: "https://en.wikipedia.org/wiki/Pantheon_(software)")) web platform to indicate a site that has been frozen due to inactivity."
+        "Used by the \(createLink(text: "Pantheon", link: "https://en.wikipedia.org/wiki/Pantheon_(software)")) web platform to indicate a site that has been frozen due to inactivity."
     ),
     Case(code: 509,
          name: "Bandwidth Limit Exceeded",

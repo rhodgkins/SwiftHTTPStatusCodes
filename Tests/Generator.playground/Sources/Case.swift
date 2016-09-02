@@ -12,7 +12,7 @@ public struct Case {
         self.code = code
         self.name = name
         self.comments = ["\(name): \(code)", ""] + comments
-        let identifiers = name.replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ")
+        let identifiers = (SpecialCaseNameLookup[code] ?? name).replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ")
         caseName = identifiers.enumerated().map {
             // Match Swift 3.0 enum case naming convention
             return $0 == identifiers.startIndex ? $1.lowercasedFirstCharacter() : $1.uppercasedFirstCharacter()

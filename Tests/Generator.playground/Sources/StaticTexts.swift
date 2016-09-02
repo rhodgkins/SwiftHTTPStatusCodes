@@ -85,6 +85,11 @@ public let EnumExtension = text(
     "}"
 )
 
+/// Allows conversions of special cases defined in the RFC spec.
+let SpecialCaseNameLookup = [
+    418 : "Im A Teapot"
+]
+
 public let ExtraCases = [
     
     // MARK: RFC

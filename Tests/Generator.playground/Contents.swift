@@ -107,7 +107,7 @@ if let (lastUpdated, allCases) = fetchCSV() {
     print(createEnumHeaderComment(lastUpdated: lastUpdated))
     print(EnumDeclarationStart)
     print()
-    print(cases.sorted().map({ String(describing: $0) }).joined(separator: "\n\n"))
+    print(cases.sorted().map(String.init(describing:)).joined(separator: "\n\n"))
     print(EnumDeclarationEnd)
     print()
 }

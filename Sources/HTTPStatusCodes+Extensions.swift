@@ -11,27 +11,27 @@ import Foundation
 public extension HTTPStatusCode {
     /// Informational - Request received, continuing process.
     public var isInformational: Bool {
-        return inRange(100...199)
+        return isIn(range: 100...199)
     }
     /// Success - The action was successfully received, understood, and accepted.
     public var isSuccess: Bool {
-        return inRange(200...299)
+        return isIn(range: 200...299)
     }
     /// Redirection - Further action must be taken in order to complete the request.
     public var isRedirection: Bool {
-        return inRange(300...399)
+        return isIn(range: 300...399)
     }
     /// Client Error - The request contains bad syntax or cannot be fulfilled.
     public var isClientError: Bool {
-        return inRange(400...499)
+        return isIn(range: 400...499)
     }
     /// Server Error - The server failed to fulfill an apparently valid request.
     public var isServerError: Bool {
-        return inRange(500...599)
+        return isIn(range: 500...599)
     }
     
     /// - returns: `true` if the status code is in the provided range, false otherwise.
-    private func inRange(range: Range<HTTPStatusCode.RawValue>) -> Bool {
+    private func isIn(range: ClosedRange<HTTPStatusCode.RawValue>) -> Bool {
         return range.contains(rawValue)
     }
 }

@@ -13,8 +13,8 @@ public struct Case {
         self.code = code
         self.name = name
         self.comments = ["\(name): \(code)", ""] + comments
-        // Remove all non code print characters
-        let identifiers = (SpecialCaseNameLookup[code] ?? name).replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ")
+        // Remove all non code print characters, interpret '-' as a space
+        let identifiers = (SpecialCaseNameLookup[code] ?? name).replacingOccurrences(of: "\\-", with: " ", options: [.caseInsensitive, .regularExpression]).replacingOccurrences(of: "[^a-z0-9 ]", with: "", options: [.caseInsensitive, .regularExpression]).components(separatedBy: " ")
         
         // Must always have at least 1 value for the identifiers
         let prefix = identifiers.first!

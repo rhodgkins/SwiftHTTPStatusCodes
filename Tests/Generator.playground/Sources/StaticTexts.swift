@@ -135,7 +135,7 @@ public let ExtraCases = [
         "**Category**: nginx"
     ),
     Case(code: 496,
-         name: "nginx SSLCertificate Required",
+         name: "nginx SSL Certificate Required",
      comments:
         "An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.",
         "",

@@ -94,35 +94,32 @@ final class HTTPStatusCodesTests: XCTestCase {
     
     func testInvalidBooleanRangeChecks() {
         
-        func ranges(rs: Range<Int>...) -> [Int] {
-            var result = [Int]()
-            for r in rs {
-                result.appendContentsOf(r)
-            }
-            return result
+        /// 0...1000 - `ignoredRange`
+        func range(ignoringRange ignoredRange: ClosedRange<Int>) -> [Int] {
+            return (0...1000).filter { !ignoredRange.contains($0) }
         }
         
-        for i in ranges(0..<100, 200...1000) {
+        for i in range(ignoringRange: 100...199) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isInformational, "Should be not informational status code")
             }
         }
-        for i in ranges(0..<200, 300...1000) {
+        for i in range(ignoringRange: 200...299) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isSuccess, "Should be not success status code")
             }
         }
-        for i in ranges(0..<300, 400...1000) {
+        for i in range(ignoringRange: 300...399) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isRedirection, "Should be not redirection status code")
             }
         }
-        for i in ranges(0..<400, 500...1000) {
+        for i in range(ignoringRange: 400...499) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isClientError, "Should be not client error status code")
             }
         }
-        for i in ranges(0..<500, 600...1000) {
+        for i in range(ignoringRange: 500...599) {
             if let statusCode = HTTPStatusCode(rawValue: i) {
                 XCTAssertFalse(statusCode.isServerError, "Should be not server error status code")
             }

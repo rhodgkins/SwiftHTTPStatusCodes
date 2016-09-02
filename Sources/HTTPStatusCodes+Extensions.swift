@@ -104,41 +104,51 @@ public extension NSHTTPURLResponse {
 
 public extension HTTPStatusCode {
     
-    @available(*, deprecated, renamed="PayloadTooLarge")
-    static let RequestEntityTooLarge = PayloadTooLarge
+    /// - deprecated: Renamed to `payloadTooLarge`
+    @available(*, deprecated, renamed: "payloadTooLarge")
+    static let requestEntityTooLarge = payloadTooLarge
     
-    @available(*, deprecated, renamed="URITooLong")
-    static let RequestURITooLong = URITooLong
+    /// - deprecated: Renamed to `uriTooLong`
+    @available(*, deprecated, renamed: "uriTooLong")
+    static let requestURITooLong = uriTooLong
     
-    @available(*, deprecated, renamed="RangeNotSatisfiable")
-    static let RequestedRangeNotSatisfiable = RangeNotSatisfiable
+    /// - deprecated: Renamed to `rangeNotSatisfiable`
+    @available(*, deprecated, renamed: "rangeNotSatisfiable")
+    static let requestedRangeNotSatisfiable = rangeNotSatisfiable
     
-    @available(*, deprecated, renamed="IISLoginTimeout")
-    static let LoginTimeout = IISLoginTimeout
+    /// - deprecated: Renamed to `iisLoginTimeout`
+    @available(*, deprecated, renamed: "iisLoginTimeout")
+    static let loginTimeout = iisLoginTimeout
     
-    @available(*, deprecated, renamed="IISRetryWith")
-    static let RetryWith = IISRetryWith
+    /// - deprecated: Renamed to `iisRetryWith`
+    @available(*, deprecated, renamed: "iisRetryWith")
+    static let retryWith = iisRetryWith
     
-    @available(*, deprecated, renamed="NginxNoResponse")
-    static let NoResponse = NginxNoResponse
+    /// - deprecated: Renamed to `nginxNoResponse`
+    @available(*, deprecated, renamed: "nginxNoResponse")
+    static let noResponse = nginxNoResponse
     
-    @available(*, deprecated, renamed="NginxSSLCertificateError")
-    static let CertError = NginxSSLCertificateError
+    /// - deprecated: Renamed to `nginxSSLCertificateError`
+    @available(*, deprecated, renamed: "nginxSSLCertificateError")
+    static let certError = nginxSSLCertificateError
     
-    @available(*, deprecated, renamed="NginxSSLCertificateRequired")
-    static let NoCert = NginxSSLCertificateRequired
+    /// - deprecated: Renamed to `nginxSSLCertificateRequired`
+    @available(*, deprecated, renamed: "nginxSSLCertificateRequired")
+    static let noCert = nginxSSLCertificateRequired
     
-    @available(*, deprecated, renamed="NginxHTTPToHTTPS")
-    static let HTTPToHTTPS = NginxHTTPToHTTPS
+    /// - deprecated: Renamed to `nginxHTTPToHTTPS`
+    @available(*, deprecated, renamed: "nginxHTTPToHTTPS")
+    static let httpToHTTPS = nginxHTTPToHTTPS
     
-    @available(*, deprecated, renamed="NginxClientClosedRequest")
-    static let ClientClosedRequest = NginxClientClosedRequest
+    /// - deprecated: Renamed to `nginxClientClosedRequest`
+    @available(*, deprecated, renamed: "nginxClientClosedRequest")
+    static let clientClosedRequest = nginxClientClosedRequest
     
-    /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
+    /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests (`tooManyRequests`) response code instead.
     ///
     /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
-    @available(*, deprecated, renamed="TooManyRequests")
-    static let TwitterEnhanceYourCalm = TooManyRequests
+    @available(*, deprecated, renamed: "tooManyRequests")
+    static let twitterEnhanceYourCalm = tooManyRequests
 }
 
 // MARK: - Remove cases
@@ -153,32 +163,32 @@ public extension HTTPStatusCode {
     /// No longer used. Originally meant "Subsequent requests should use the specified proxy."
     ///
     /// - seealso: [Original draft](https://tools.ietf.org/html/draft-cohen-http-305-306-responses-00)
-    @available(*, unavailable, message="No longer used")
-    static let SwitchProxy = __Unavailable
+    @available(*, unavailable, message: "No longer used")
+    static let switchProxy = __Unavailable
     
     /// Authentication Timeout: 419
     ///
     /// Removed from Wikipedia page.
-    @available(*, unavailable, message="No longer available")
-    static let AuthenticationTimeout = __Unavailable
+    @available(*, unavailable, message: "No longer available")
+    static let authenticationTimeout = __Unavailable
     
     /// Method Failure: 419
     ///
     /// A deprecated response used by the Spring Framework when a method has failed.
     ///
     /// - seealso: [Spring Framework: HttpStatus enum documentation - `METHOD_FAILURE`](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/HttpStatus.html#METHOD_FAILURE)
-    @available(*, unavailable, message="Deprecated")
-    static let SpringFrameworkMethodFailure = __Unavailable
+    @available(*, unavailable, message: "Deprecated")
+    static let springFrameworkMethodFailure = __Unavailable
     
     /// Request Header Too Large: 494
     ///
     /// Removed and replaced with `RequestHeaderFieldsTooLarge` - 431
-    @available(*, unavailable, renamed="RequestHeaderFieldsTooLarge", message="Changed to a 431 status code")
-    static let RequestHeaderTooLarge = __Unavailable
+    @available(*, unavailable, renamed: "requestHeaderFieldsTooLarge", message: "Changed to a 431 status code")
+    static let requestHeaderTooLarge = __Unavailable
     
     /// Network Timeout Error: 599
     ///
     /// Removed from Wikipedia page.
-    @available(*, unavailable, message="No longer available")
-    static let NetworkTimeoutError = __Unavailable
+    @available(*, unavailable, message: "No longer available")
+    static let networkTimeoutError = __Unavailable
 }

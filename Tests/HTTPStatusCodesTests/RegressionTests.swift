@@ -6,7 +6,7 @@
 //  Copyright © 2016 Rich H. All rights reserved.
 //
 
-import XCTest
+import Foundation
 
 #if os(watchOS)
 // No testing supported

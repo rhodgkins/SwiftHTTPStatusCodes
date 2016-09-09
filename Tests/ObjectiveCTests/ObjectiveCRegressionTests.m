@@ -6,11 +6,15 @@
 //  Copyright © 2016 Rich H. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+@import Foundation;
 
 @import HTTPStatusCodes;
 
-//#import <HTTPStatusCodes/HTTPStatusCodes-Swift.h>
+#if TARGET_OS_WATCH
+// No testing supported
+#else
+
+@import XCTest;
 
 @interface ObjectiveCRegressionTests : XCTestCase
 
@@ -173,3 +177,4 @@
 }
 
 @end
+#endif

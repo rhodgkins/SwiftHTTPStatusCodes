@@ -16,11 +16,13 @@ If this library is out of date compared to this page please open an issue and I 
 
 ## Usage
 
+Swift 3.0 support is added in version 3.1 of this framework. For use with older versions of Swift use version 3.0.
+
 ### Carthage
 
 `Cartfile`:
 ```ogdl
-github "rhodgkins/SwiftHTTPStatusCodes" ~> 3.0
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 3.1
 ```
 Source code:
 ```swift
@@ -30,7 +32,7 @@ import HTTPStatusCodes
 ### CocoaPods
 `Podfile`:
 ```ruby
-pod 'HTTPStatusCodes', '~> 3.0.0'
+pod 'HTTPStatusCodes', '~> 3.1.0'
 ```
 Source code:
 

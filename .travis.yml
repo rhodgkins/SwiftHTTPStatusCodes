@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 script:
     # Workaround for Simulator getting stuck
     # See: https://github.com/travis-ci/travis-ci/issues/3040#issuecomment-146700203

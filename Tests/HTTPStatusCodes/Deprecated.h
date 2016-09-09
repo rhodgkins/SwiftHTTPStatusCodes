@@ -13,25 +13,35 @@ typedef const NSInteger __HTTPStatusCode NS_SWIFT_UNAVAILABLE("");
 
 // MARK: - Deprecated
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestEntityTooLarge instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodePayloadTooLarge");
+/// - deprecated: Renamed to `HTTPStatusCodePayloadTooLarge`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestEntityTooLarge NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestEntityTooLarge instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodePayloadTooLarge");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestURITooLong NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestURITooLong instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeURITooLong");
+/// - deprecated: Renamed to `HTTPStatusCodeURITooLong`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestURITooLong NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestURITooLong instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeURITooLong");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RequestedRangeNotSatisfiable instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeRangeNotSatisfiable");
+/// - deprecated: Renamed to `HTTPStatusCodeRangeNotSatisfiable`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestedRangeNotSatisfiable NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.requestedRangeNotSatisfiable instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeRangeNotSatisfiable");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeLoginTimeout NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.LoginTimeout instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISLoginTimeout");
+/// - deprecated: Renamed to `HTTPStatusCodeIISLoginTimeout`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeLoginTimeout NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.loginTimeout instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISLoginTimeout");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRetryWith NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.RetryWith instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISRetryWith");
+/// - deprecated: Renamed to `HTTPStatusCodeIISRetryWith`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRetryWith NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.retryWith instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeIISRetryWith");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoResponse NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoResponse instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxNoResponse");
+/// - deprecated: Renamed to `HTTPStatusCodeNginxNoResponse`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoResponse NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.noResponse instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxNoResponse");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeCertError NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.CertError instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateError");
+/// - deprecated: Renamed to `HTTPStatusCodeNginxSSLCertificateError`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeCertError NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.certError instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateError");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoCert NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.NoCert instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateRequired");
+/// - deprecated: Renamed to `HTTPStatusCodeNginxSSLCertificateRequired`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNoCert NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.noCert instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxSSLCertificateRequired");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeHTTPToHTTPS NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.HTTPToHTTPS instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxHTTPToHTTPS");
+/// - deprecated: Renamed to `HTTPStatusCodeNginxHTTPToHTTPS`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeHTTPToHTTPS NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.hTTPToHTTPS instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxHTTPToHTTPS");
 
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeClientClosedRequest NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.ClientClosedRequest instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxClientClosedRequest");
+/// - deprecated: Renamed to `HTTPStatusCodeNginxClientClosedRequest`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeClientClosedRequest NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.clientClosedRequest instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxClientClosedRequest");
 
 /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
 ///

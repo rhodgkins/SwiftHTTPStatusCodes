@@ -5,5 +5,5 @@ script:
     # See: https://github.com/travis-ci/travis-ci/issues/3040#issuecomment-146700203
     - open -b com.apple.iphonesimulator
     - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes clean build test
-    - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes -destination "platform=iOS Simulator,name=iPhone 6" clean build test
+    - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes -destination "platform=iOS Simulator,name=iPhone 7" clean build test
     - xcodebuild -project Tests/HTTPStatusCodes.xcodeproj -scheme HTTPStatusCodes  -destination "platform=tvOS Simulator,name=Apple TV 1080p" clean build test

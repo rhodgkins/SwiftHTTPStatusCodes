@@ -8,13 +8,14 @@
 
 @import Foundation;
 
-@import HTTPStatusCodes;
-
 #if TARGET_OS_WATCH
 // No testing supported
 #else
 
 @import XCTest;
+@import HTTPStatusCodes;
+
+#import <HTTPStatusCodes/HTTPStatusCodes-Swift.h>
 
 @interface ObjectiveCRegressionTests : XCTestCase
 

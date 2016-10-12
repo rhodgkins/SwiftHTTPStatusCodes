@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,7 @@
 		440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */; };
 		4410E6E11D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */; };
 		442266871D076CA10083A675 /* RegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442266861D076CA10083A675 /* RegressionTests.swift */; };
-		442A43991D09513E00807BFA /* ObjectiveCRegressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442A43981D09513E00807BFA /* ObjectiveCRegressionTests.m */; };
-		442A439B1D09513E00807BFA /* HTTPStatusCodes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */; };
+		4423AB191DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */; };
 		444320471D08CA1D00A6CA18 /* Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 444320461D08C9AC00A6CA18 /* Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		444320491D08CAED00A6CA18 /* Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 444320481D08CAED00A6CA18 /* Deprecated.m */; };
 		44D94E4D1D07387400DC7B50 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D94E4C1D07387400DC7B50 /* HTTPStatusCodes.swift */; };
@@ -21,13 +20,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		440D141F1A99DD1D00EEB60B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 440D14091A99DD1D00EEB60B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 440D14111A99DD1D00EEB60B;
-			remoteInfo = HTTPStatusCodes;
-		};
-		442A439C1D09513E00807BFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 440D14091A99DD1D00EEB60B /* Project object */;
 			proxyType = 1;
@@ -49,9 +41,7 @@
 		4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPStatusCodes+Extensions.swift"; sourceTree = "<group>"; };
 		4410E6E21D074E7500AC18E6 /* Generator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generator.playground; sourceTree = "<group>"; };
 		442266861D076CA10083A675 /* RegressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionTests.swift; sourceTree = "<group>"; };
-		442A43961D09513E00807BFA /* ObjectiveCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		442A43981D09513E00807BFA /* ObjectiveCRegressionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCRegressionTests.m; sourceTree = "<group>"; };
-		442A439A1D09513E00807BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCRegressionTests.m; sourceTree = "<group>"; };
 		444320461D08C9AC00A6CA18 /* Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deprecated.h; sourceTree = "<group>"; };
 		444320481D08CAED00A6CA18 /* Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deprecated.m; sourceTree = "<group>"; };
 		446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HTTPStatusCodes.xcconfig; sourceTree = "<group>"; };
@@ -79,14 +69,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		442A43931D09513E00807BFA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				442A439B1D09513E00807BFA /* HTTPStatusCodes.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,7 +84,6 @@
 				4410E6E21D074E7500AC18E6 /* Generator.playground */,
 				440D14141A99DD1D00EEB60B /* HTTPStatusCodes */,
 				440D14211A99DD1D00EEB60B /* HTTPStatusCodesTests */,
-				442A43971D09513E00807BFA /* ObjectiveCTests */,
 				440D14131A99DD1D00EEB60B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +93,6 @@
 			children = (
 				440D14121A99DD1D00EEB60B /* HTTPStatusCodes.framework */,
 				440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */,
-				442A43961D09513E00807BFA /* ObjectiveCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,20 +112,12 @@
 		440D14211A99DD1D00EEB60B /* HTTPStatusCodesTests */ = {
 			isa = PBXGroup;
 			children = (
+				440D14231A99DD1D00EEB60B /* Info.plist */,
 				440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */,
 				442266861D076CA10083A675 /* RegressionTests.swift */,
-				440D14231A99DD1D00EEB60B /* Info.plist */,
+				4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */,
 			);
 			path = HTTPStatusCodesTests;
-			sourceTree = "<group>";
-		};
-		442A43971D09513E00807BFA /* ObjectiveCTests */ = {
-			isa = PBXGroup;
-			children = (
-				442A43981D09513E00807BFA /* ObjectiveCRegressionTests.m */,
-				442A439A1D09513E00807BFA /* Info.plist */,
-			);
-			path = ObjectiveCTests;
 			sourceTree = "<group>";
 		};
 		449852011B5A39140081F132 /* SupportingFiles */ = {
@@ -220,24 +192,6 @@
 			productReference = 440D141D1A99DD1D00EEB60B /* HTTPStatusCodesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		442A43951D09513E00807BFA /* ObjectiveCTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 442A439E1D09513E00807BFA /* Build configuration list for PBXNativeTarget "ObjectiveCTests" */;
-			buildPhases = (
-				442A43921D09513E00807BFA /* Sources */,
-				442A43931D09513E00807BFA /* Frameworks */,
-				442A43941D09513E00807BFA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				442A439D1D09513E00807BFA /* PBXTargetDependency */,
-			);
-			name = ObjectiveCTests;
-			productName = ObjectiveCTests;
-			productReference = 442A43961D09513E00807BFA /* ObjectiveCTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -255,13 +209,10 @@
 					440D141C1A99DD1D00EEB60B = {
 						CreatedOnToolsVersion = 6.3;
 					};
-					442A43951D09513E00807BFA = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 				};
 			};
 			buildConfigurationList = 440D140C1A99DD1D00EEB60B /* Build configuration list for PBXProject "HTTPStatusCodes" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -274,7 +225,6 @@
 			targets = (
 				440D14111A99DD1D00EEB60B /* HTTPStatusCodes */,
 				440D141C1A99DD1D00EEB60B /* HTTPStatusCodesTests */,
-				442A43951D09513E00807BFA /* ObjectiveCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,13 +238,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		440D141B1A99DD1D00EEB60B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		442A43941D09513E00807BFA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,16 +261,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442266871D076CA10083A675 /* RegressionTests.swift in Sources */,
 				440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		442A43921D09513E00807BFA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				442A43991D09513E00807BFA /* ObjectiveCRegressionTests.m in Sources */,
+				442266871D076CA10083A675 /* RegressionTests.swift in Sources */,
+				4423AB191DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,11 +274,6 @@
 			isa = PBXTargetDependency;
 			target = 440D14111A99DD1D00EEB60B /* HTTPStatusCodes */;
 			targetProxy = 440D141F1A99DD1D00EEB60B /* PBXContainerItemProxy */;
-		};
-		442A439D1D09513E00807BFA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 440D14111A99DD1D00EEB60B /* HTTPStatusCodes */;
-			targetProxy = 442A439C1D09513E00807BFA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -441,7 +372,6 @@
 		440D14291A99DD1D00EEB60B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -457,7 +387,6 @@
 		440D142A1A99DD1D00EEB60B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -473,11 +402,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = HTTPStatusCodesTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -485,44 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = HTTPStatusCodesTests;
-			};
-			name = Release;
-		};
-		442A439F1D09513E00807BFA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = ObjectiveCTests/Info.plist;
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		442A43A01D09513E00807BFA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = ObjectiveCTests/Info.plist;
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -552,15 +452,6 @@
 			buildConfigurations = (
 				440D142C1A99DD1D00EEB60B /* Debug */,
 				440D142D1A99DD1D00EEB60B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		442A439E1D09513E00807BFA /* Build configuration list for PBXNativeTarget "ObjectiveCTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				442A439F1D09513E00807BFA /* Debug */,
-				442A43A01D09513E00807BFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

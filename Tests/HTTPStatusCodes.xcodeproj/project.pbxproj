@@ -13,6 +13,7 @@
 		4410E6E11D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4410E6E01D0740DA00AC18E6 /* HTTPStatusCodes+Extensions.swift */; };
 		442266871D076CA10083A675 /* RegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442266861D076CA10083A675 /* RegressionTests.swift */; };
 		4423AB191DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */; };
+		442DC0301DAEC41600420E08 /* ObjectiveCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442DC02F1DAEC41600420E08 /* ObjectiveCTests.m */; };
 		444320471D08CA1D00A6CA18 /* Deprecated.h in Headers */ = {isa = PBXBuildFile; fileRef = 444320461D08C9AC00A6CA18 /* Deprecated.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		444320491D08CAED00A6CA18 /* Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 444320481D08CAED00A6CA18 /* Deprecated.m */; };
 		44D94E4D1D07387400DC7B50 /* HTTPStatusCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D94E4C1D07387400DC7B50 /* HTTPStatusCodes.swift */; };
@@ -42,6 +43,7 @@
 		4410E6E21D074E7500AC18E6 /* Generator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Generator.playground; sourceTree = "<group>"; };
 		442266861D076CA10083A675 /* RegressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegressionTests.swift; sourceTree = "<group>"; };
 		4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCRegressionTests.m; sourceTree = "<group>"; };
+		442DC02F1DAEC41600420E08 /* ObjectiveCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTests.m; sourceTree = "<group>"; };
 		444320461D08C9AC00A6CA18 /* Deprecated.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Deprecated.h; sourceTree = "<group>"; };
 		444320481D08CAED00A6CA18 /* Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Deprecated.m; sourceTree = "<group>"; };
 		446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = HTTPStatusCodes.xcconfig; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				440D14231A99DD1D00EEB60B /* Info.plist */,
 				440D14241A99DD1D00EEB60B /* HTTPStatusCodesTests.swift */,
+				442DC02F1DAEC41600420E08 /* ObjectiveCTests.m */,
 				442266861D076CA10083A675 /* RegressionTests.swift */,
 				4423AB181DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m */,
 			);
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				440D14251A99DD1D00EEB60B /* HTTPStatusCodesTests.swift in Sources */,
+				442DC0301DAEC41600420E08 /* ObjectiveCTests.m in Sources */,
 				442266871D076CA10083A675 /* RegressionTests.swift in Sources */,
 				4423AB191DAEAF5700C36EA3 /* ObjectiveCRegressionTests.m in Sources */,
 			);

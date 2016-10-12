@@ -28,7 +28,7 @@ private func responseUsingRawValue(_ statusCode: HTTPStatusCode) -> HTTPURLRespo
     return HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: statusCode.rawValue, httpVersion: nil, headerFields: nil)!
 }
 private func responseUsingEnum(_ statusCode: HTTPStatusCode) -> HTTPURLResponse {
-    return HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: statusCode, HTTPVersion: nil, headerFields: nil)!
+    return HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: statusCode, httpVersion: nil, headerFields: nil)!
 }
 
 final class HTTPStatusCodesTests: XCTestCase {

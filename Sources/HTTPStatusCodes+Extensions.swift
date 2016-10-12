@@ -103,8 +103,8 @@ public extension HTTPURLResponse {
      */
     @available(iOS, introduced: 7.0)
     @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
-    public convenience init?(url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
-        self.init(url: url, statusCode: statusCode.rawValue, httpVersion: HTTPVersion, headerFields: headerFields)
+    public convenience init?(url: URL, statusCode: HTTPStatusCode, httpVersion: String?, headerFields: [String : String]?) {
+        self.init(url: url, statusCode: statusCode.rawValue, httpVersion: httpVersion, headerFields: headerFields)
     }
 }
 
@@ -157,6 +157,16 @@ public extension HTTPStatusCode {
     /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
     @available(*, deprecated, renamed: "tooManyRequests")
     static let twitterEnhanceYourCalm = tooManyRequests
+}
+
+public extension HTTPURLResponse {
+    
+    /// - deprecated: Renamed to `init(url:statusCode:httpVersion:headerFields)` to correct Swift 3 naming convention.
+    @available(*, deprecated, renamed: "init(url:statusCode:httpVersion:headerFields:)", message: "Renamed to correct Swift 3 naming convention")
+    @nonobjc
+    public convenience init?(url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
+        self.init(url: url, statusCode: statusCode, httpVersion: HTTPVersion, headerFields: headerFields)
+    }
 }
 
 // MARK: - Remove cases

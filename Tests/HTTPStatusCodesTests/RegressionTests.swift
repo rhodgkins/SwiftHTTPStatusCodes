@@ -182,6 +182,8 @@ final class RegressionTests: XCTestCase {
         XCTAssertEqual(HTTPStatusCode.notExtended, 510)
         XCTAssertEqual(HTTPStatusCode.networkAuthenticationRequired, 511)
         XCTAssertEqual(HTTPStatusCode.siteIsFrozen, 530)
+        
+        XCTAssertEqual(HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: .ok, HTTPVersion: nil, headerFields: nil)!.statusCodeValue, .ok)
     }
 }
     

@@ -10,7 +10,7 @@
 
 PRODUCT_NAME                            = HTTPStatusCodes
 PRODUCT_BUNDLE_IDENTIFIER               = uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)
-HSC_VERSION                             = 3.1.0
+HSC_VERSION                             = 3.1.1
 
 // Universal Framework
 APPLICATION_EXTENSION_API_ONLY          = YES

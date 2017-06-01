@@ -73,7 +73,7 @@ func fetchCSV() -> (lastUpdated: String, cases: Set<Case>)? {
             return
         }
         guard let d = data, let string = String(data: d, encoding: .utf8) else {
-            print("Unable to decode data: \(data)")
+            print("Unable to decode data: \(String(describing: data))")
             return
         }
         

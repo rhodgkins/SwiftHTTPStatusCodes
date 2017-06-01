@@ -32,7 +32,7 @@ import HTTPStatusCodes
 ### CocoaPods
 `Podfile`:
 ```ruby
-pod 'HTTPStatusCodes', '~> 3.1.1'
+pod 'HTTPStatusCodes', '~> 3.1.2'
 ```
 Source code:
 

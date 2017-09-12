@@ -406,5 +406,10 @@ import Foundation
     /// 
     /// Used by the [Pantheon](https://en.wikipedia.org/wiki/Pantheon_(software)) web platform to indicate a site that has been frozen due to inactivity.
     case siteIsFrozen = 530
+    
+    /// Network Connect Timeout Error: 599
+    /// 
+    /// This status code is not specified in any RFCs, but is used by some HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy. 
+    case networkConnectTimeout = 599
 }
 

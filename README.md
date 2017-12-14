@@ -22,7 +22,7 @@ Swift 3.0 support is added in version 3.1 of this framework. For use with older 
 
 `Cartfile`:
 ```ogdl
-github "rhodgkins/SwiftHTTPStatusCodes" ~> 3.1
+github "rhodgkins/SwiftHTTPStatusCodes" ~> 3.2
 ```
 Source code:
 ```swift
@@ -32,7 +32,7 @@ import HTTPStatusCodes
 ### CocoaPods
 `Podfile`:
 ```ruby
-pod 'HTTPStatusCodes', '~> 3.1.2'
+pod 'HTTPStatusCodes', '~> 3.2.0'
 ```
 Source code:
 

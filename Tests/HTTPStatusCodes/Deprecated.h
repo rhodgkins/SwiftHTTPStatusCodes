@@ -54,6 +54,15 @@ FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeTwitterEnhanceYourCalm NS_SWIFT
 
 // MARK: - Removed
 
+/// Checkpoint: 103
+///
+/// Used in the resumable requests proposal to resume aborted PUT or POST requests.
+///
+/// Removed and replaced with `EarlyHints` which has a different meaning.
+///
+/// - seealso: [Original proposal](https://web.archive.org/web/20151013212135/http://code.google.com/p/gears/wiki/ResumableHttpRequestsProposal)
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeCheckpoint NS_UNAVAILABLE;
+
 /// Switch Proxy: 306
 ///
 /// No longer used. Originally meant "Subsequent requests should use the specified proxy."

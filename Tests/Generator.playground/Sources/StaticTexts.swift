@@ -150,11 +150,6 @@ public let ExtraCases = [
     
     // MARK: Other
     
-    Case(code: 103,
-         name: "Checkpoint",
-     comments:
-        "Used in the resumable requests proposal to resume aborted PUT or POST requests."
-    ),
     Case(code: 450,
          name: "Blocked by Windows Parental Controls",
      comments:

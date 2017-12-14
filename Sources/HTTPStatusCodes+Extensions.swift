@@ -180,6 +180,14 @@ private let __Unavailable: HTTPStatusCode! = nil
 
 public extension HTTPStatusCode {
     
+    /// Checkpoint: 103
+    ///
+    /// Used in the resumable requests proposal to resume aborted PUT or POST requests.
+    ///
+    /// - seealso: [Original proposal](https://web.archive.org/web/20151013212135/http://code.google.com/p/gears/wiki/ResumableHttpRequestsProposal)
+    @available(*, unavailable, renamed: "earlyHints", message: "Replaced by RFC standard code with different meaning")
+    static let checkpoint = __Unavailable
+    
     /// Switch Proxy: 306
     ///
     /// No longer used. Originally meant "Subsequent requests should use the specified proxy."

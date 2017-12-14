@@ -27,6 +27,7 @@ __HTTPStatusCode HTTPStatusCodeTwitterEnhanceYourCalm = HTTPStatusCodeTooManyReq
 
 // MARK: - Removed
 
+__HTTPStatusCode HTTPStatusCodeCheckpoint = 103;
 __HTTPStatusCode HTTPStatusCodeSwitchProxy = 306;
 __HTTPStatusCode HTTPStatusCodeAuthenticationTimeout = 419;
 __HTTPStatusCode HTTPStatusCodeSpringFrameworkMethodFailure = 419;

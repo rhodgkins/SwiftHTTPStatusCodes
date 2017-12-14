@@ -98,7 +98,7 @@
     XCTAssertEqual(HTTPStatusCodeBandwidthLimitExceeded, 509);
     XCTAssertEqual(HTTPStatusCodeNotExtended, 510);
     XCTAssertEqual(HTTPStatusCodeNetworkAuthenticationRequired, 511);
-//    XCTAssertEqual(HTTPStatusCodeNetworkTimeoutError, 599);
+    XCTAssertEqual(HTTPStatusCodeNetworkTimeoutError, 599);
 }
 
 -(void)testVersion3_0
@@ -175,6 +175,7 @@
     XCTAssertEqual(HTTPStatusCodeNotExtended, 510);
     XCTAssertEqual(HTTPStatusCodeNetworkAuthenticationRequired, 511);
     XCTAssertEqual(HTTPStatusCodeSiteIsFrozen, 530);
+    XCTAssertEqual(HTTPStatusCodeNetworkConnectTimeoutError, 599);
 }
 
 @end

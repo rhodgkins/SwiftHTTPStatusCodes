@@ -106,7 +106,7 @@ final class RegressionTests: XCTestCase {
         XCTAssertEqual(HTTPStatusCode.bandwidthLimitExceeded, 509)
         XCTAssertEqual(HTTPStatusCode.notExtended, 510)
         XCTAssertEqual(HTTPStatusCode.networkAuthenticationRequired, 511)
-//        XCTAssertEqual(HTTPStatusCode.networkTimeoutError, 599)
+        XCTAssertEqual(HTTPStatusCode.networkTimeoutError, 599)
     }
     
     func testVersion3_0() {
@@ -182,6 +182,7 @@ final class RegressionTests: XCTestCase {
         XCTAssertEqual(HTTPStatusCode.notExtended, 510)
         XCTAssertEqual(HTTPStatusCode.networkAuthenticationRequired, 511)
         XCTAssertEqual(HTTPStatusCode.siteIsFrozen, 530)
+        XCTAssertEqual(HTTPStatusCode.networkConnectTimeoutError, 599)
         
         XCTAssertEqual(HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: .ok, HTTPVersion: nil, headerFields: nil)!.statusCodeValue, .ok)
     }

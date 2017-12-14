@@ -152,6 +152,10 @@ public extension HTTPStatusCode {
     @available(*, deprecated, renamed: "nginxClientClosedRequest")
     static let clientClosedRequest = nginxClientClosedRequest
     
+    /// - deprecated: Renamed to `networkConnectTimeoutError`
+    @available(*, deprecated, renamed: "networkConnectTimeoutError")
+    static let networkTimeoutError = networkConnectTimeoutError
+    
     /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests (`tooManyRequests`) response code instead.
     ///
     /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
@@ -203,10 +207,4 @@ public extension HTTPStatusCode {
     /// Removed and replaced with `RequestHeaderFieldsTooLarge` - 431
     @available(*, unavailable, renamed: "requestHeaderFieldsTooLarge", message: "Changed to a 431 status code")
     static let requestHeaderTooLarge = __Unavailable
-    
-    /// Network Timeout Error: 599
-    ///
-    /// Removed from Wikipedia page.
-    @available(*, unavailable, message: "No longer available")
-    static let networkTimeoutError = __Unavailable
 }

@@ -43,6 +43,9 @@ FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeHTTPToHTTPS NS_SWIFT_UNAVAILABL
 /// - deprecated: Renamed to `HTTPStatusCodeNginxClientClosedRequest`
 FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeClientClosedRequest NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.clientClosedRequest instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNginxClientClosedRequest");
 
+/// - deprecated: Renamed to `HTTPStatusCodeNetworkConnectTimeoutError`
+FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNetworkTimeoutError NS_SWIFT_UNAVAILABLE("Use HTTPStatusCode.networkTimeoutError instead") DEPRECATED_MSG_ATTRIBUTE("Renamed to HTTPStatusCodeNetworkConnectTimeoutError");;
+
 /// Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.
 ///
 /// - seealso: [Twitter Error Codes & Responses](https://dev.twitter.com/docs/error-codes-responses)
@@ -74,8 +77,3 @@ FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeSpringFrameworkMethodFailure NS
 ///
 /// Removed and replaced with `RequestHeaderFieldsTooLarge` - 431
 FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeRequestHeaderTooLarge NS_UNAVAILABLE;
-
-/// Network Timeout Error: 599
-///
-/// Removed from Wikipedia page.
-FOUNDATION_EXTERN __HTTPStatusCode HTTPStatusCodeNetworkTimeoutError NS_UNAVAILABLE;

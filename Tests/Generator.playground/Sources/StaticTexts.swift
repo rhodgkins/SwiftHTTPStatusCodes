@@ -178,5 +178,9 @@ public let ExtraCases = [
         "The server has exceeded the bandwidth specified by the server administrator; this is often used by shared hosting providers to limit the bandwidth of customers.",
         "",
         createSeeAlso(link: "https://documentation.cpanel.net/display/CKB/HTTP+Error+Codes+and+Quick+Fixes#HTTPErrorCodesandQuickFixes-509BandwidthLimitExceeded")
+    ),
+    Case(code: 599,
+         name: "Network Connect Timeout Error",
+     comments: "This status code is not specified in any RFCs, but is used by some HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy."
     )
 ]

@@ -22,6 +22,7 @@ __HTTPStatusCode HTTPStatusCodeCertError = HTTPStatusCodeNginxSSLCertificateErro
 __HTTPStatusCode HTTPStatusCodeNoCert = HTTPStatusCodeNginxSSLCertificateRequired;
 __HTTPStatusCode HTTPStatusCodeHTTPToHTTPS = HTTPStatusCodeNginxHTTPToHTTPS;
 __HTTPStatusCode HTTPStatusCodeClientClosedRequest = HTTPStatusCodeNginxClientClosedRequest;
+__HTTPStatusCode HTTPStatusCodeNetworkTimeoutError = HTTPStatusCodeNetworkConnectTimeoutError;
 __HTTPStatusCode HTTPStatusCodeTwitterEnhanceYourCalm = HTTPStatusCodeTooManyRequests;
 
 // MARK: - Removed
@@ -30,4 +31,3 @@ __HTTPStatusCode HTTPStatusCodeSwitchProxy = 306;
 __HTTPStatusCode HTTPStatusCodeAuthenticationTimeout = 419;
 __HTTPStatusCode HTTPStatusCodeSpringFrameworkMethodFailure = 419;
 __HTTPStatusCode HTTPStatusCodeRequestHeaderTooLarge = 494;
-__HTTPStatusCode HTTPStatusCodeNetworkTimeoutError = 599;

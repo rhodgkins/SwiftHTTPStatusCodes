@@ -18,6 +18,13 @@ If this library is out of date compared to this page please open an issue and I 
 
 Swift 3.0 support is added in version 3.1 of this framework. For use with older versions of Swift use version 3.0.
 
+### Swift Package Manager
+
+`Package.swift`:
+```swift
+.package(url: "https://github.com/rhodgkins/SwiftHTTPStatusCodes.git", .upToNextMajor(from: "3.0.0"))
+```
+
 ### Carthage
 
 `Cartfile`:

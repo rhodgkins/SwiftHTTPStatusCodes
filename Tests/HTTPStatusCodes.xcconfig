@@ -23,6 +23,8 @@ VALID_ARCHS[sdk=appletv*]               = arm64
 VALID_ARCHS[sdk=macosx*]                = i386 x86_64
 VALID_ARCHS[sdk=watch*]                 = armv7k
 
+SWIFT_VERSION = 4.2
+
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=appletv*]   = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
 LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]    = $(inherited) @executable_path/../Frameworks @loader_path/Frameworks

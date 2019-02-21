@@ -22,13 +22,13 @@ func createEnumCaseFromLine(line: String) -> Case? {
             return nil
         }
         
-        let refsRegex = try! NSRegularExpression(pattern: "\\[([^\\]]+)\\]", options: [])
+        let refsRegex = try! NSRegularExpression(pattern: "\\[([^\\]]+)\\]")
         
         return refsRegex.matches(in: reference, options: [], range: NSRange(location: 0, length: (reference as NSString).length)).flatMap { result in
             guard result.numberOfRanges == 2 else {
                 return nil
             }
-            return createRFCSeeAlso(link: (reference as NSString).substring(with: result.rangeAt(1)))
+            return createRFCSeeAlso(link: (reference as NSString).substring(with: result.range(at: 1)))
         }
     }
     
@@ -37,9 +37,9 @@ func createEnumCaseFromLine(line: String) -> Case? {
         return nil
     }
     
-    let codeRange = match.rangeAt(1)
-    let infoRange = match.rangeAt(2)
-    let refRange = match.rangeAt(3)
+    let codeRange = match.range(at: 1)
+    let infoRange = match.range(at: 2)
+    let refRange = match.range(at: 3)
 
     let codeString = (line as NSString).substring(with: codeRange)
     let info = (line as NSString).substring(with: infoRange)
@@ -99,7 +99,7 @@ let CodeBlacklist = [
 
 if let (lastUpdated, allCases) = fetchCSV() {
     var cases = allCases.filter { !CodeBlacklist.contains($0.code) }
-    cases.append(contentsOf: ExtraCases)
+    cases.formUnion(ExtraCases)
     print(FileHeader)
     print()
     print(Imports)

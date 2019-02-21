@@ -51,13 +51,13 @@ private extension String {
     
     func lowercasedFirstCharacter() -> String {
         let firstCharacter = String(self[startIndex])
-        let rest = substring(from: index(after: startIndex))
+        let rest = self[index(after: startIndex)...]
         return firstCharacter.lowercased() + rest
     }
     
     func uppercasedFirstCharacter() -> String {
         let firstCharacter = String(self[startIndex])
-        let rest = substring(from: index(after: startIndex))
+        let rest = self[index(after: startIndex)...]
         return firstCharacter.uppercased() + rest
     }
 }

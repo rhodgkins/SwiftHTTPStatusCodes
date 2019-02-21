@@ -62,6 +62,22 @@ private extension String {
     }
 }
 
+import Foundation.NSRange
+
+public extension String {
+    
+    var nsRange: NSRange {
+        return NSRange(startIndex..<endIndex, in: self)
+    }
+    
+    subscript(range: NSRange) -> String? {
+        guard let r = Range(range, in: self) else {
+            return nil
+        }
+        return String(self[r])
+    }
+}
+
 /// List of Swift keywords
 private let UnsafeCaseNames = Set(arrayLiteral:
     "continue",

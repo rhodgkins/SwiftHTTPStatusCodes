@@ -24,31 +24,25 @@ func createEnumCaseFromLine(line: String) -> Case? {
         
         let refsRegex = try! NSRegularExpression(pattern: "\\[([^\\]]+)\\]")
         
-        return refsRegex.matches(in: reference, options: [], range: NSRange(location: 0, length: (reference as NSString).length)).flatMap { result in
-            guard result.numberOfRanges == 2 else {
+        return refsRegex.matches(in: reference, range: reference.nsRange).compactMap { result in
+            guard result.numberOfRanges == 2, let link = reference[result.range(at: 1)] else {
                 return nil
             }
-            return createRFCSeeAlso(link: (reference as NSString).substring(with: result.range(at: 1)))
+            return createRFCSeeAlso(link: link)
         }
     }
     
-    let linesRegex = try! NSRegularExpression(pattern: "^([^,]*),([^,]*),\"?([^\"$]*)\"?", options: [])
-    guard let match = linesRegex.firstMatch(in: line, range: NSRange(location: 0, length: (line as NSString).length)), match.numberOfRanges == 4 else {
+    let linesRegex = try! NSRegularExpression(pattern: "^([^,]*),([^,]*),\"?([^\"$]*)\"?")
+    guard let match = linesRegex.firstMatch(in: line, range: line.nsRange), match.numberOfRanges == 4 else {
         return nil
     }
     
-    let codeRange = match.range(at: 1)
-    let infoRange = match.range(at: 2)
-    let refRange = match.range(at: 3)
-
-    let codeString = (line as NSString).substring(with: codeRange)
-    let info = (line as NSString).substring(with: infoRange)
-    let ref: String? = refRange.location != NSNotFound ? (line as NSString).substring(with: refRange) : nil
+    let ref = line[match.range(at: 3)]
     
-    guard let code = Int(codeString, radix: 10) else {
+    guard let codeString = line[match.range(at: 1)], let code = Int(codeString, radix: 10) else {
         return nil
     }
-    guard info.lowercased() != "unassigned" else {
+    guard let info = line[match.range(at: 2)], info.lowercased() != "unassigned" else {
         return nil
     }
     

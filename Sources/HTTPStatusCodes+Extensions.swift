@@ -10,23 +10,23 @@ import Foundation
 
 public extension HTTPStatusCode {
     /// Informational - Request received, continuing process.
-    public var isInformational: Bool {
+    var isInformational: Bool {
         return isIn(range: 100...199)
     }
     /// Success - The action was successfully received, understood, and accepted.
-    public var isSuccess: Bool {
+    var isSuccess: Bool {
         return isIn(range: 200...299)
     }
     /// Redirection - Further action must be taken in order to complete the request.
-    public var isRedirection: Bool {
+    var isRedirection: Bool {
         return isIn(range: 300...399)
     }
     /// Client Error - The request contains bad syntax or cannot be fulfilled.
-    public var isClientError: Bool {
+    var isClientError: Bool {
         return isIn(range: 400...499)
     }
     /// Server Error - The server failed to fulfill an apparently valid request.
-    public var isServerError: Bool {
+    var isServerError: Bool {
         return isIn(range: 500...599)
     }
     
@@ -38,7 +38,7 @@ public extension HTTPStatusCode {
 
 public extension HTTPStatusCode {
     /// - returns: a localized string suitable for displaying to users that describes the specified status code.
-    public var localizedReasonPhrase: String {
+    var localizedReasonPhrase: String {
         return HTTPURLResponse.localizedString(forStatusCode: rawValue)
     }
 }
@@ -59,7 +59,7 @@ extension HTTPStatusCode: CustomDebugStringConvertible, CustomStringConvertible 
 public extension HTTPStatusCode {
     
     /// Obtains a possible status code from an optional HTTP URL response.
-    public init?(HTTPResponse: HTTPURLResponse?) {
+    init?(HTTPResponse: HTTPURLResponse?) {
         guard let statusCodeValue = HTTPResponse?.statusCode else {
             return nil
         }
@@ -87,7 +87,7 @@ public extension HTTPURLResponse {
     }
     
     /// - returns: the receiver’s HTTP status code.
-    public var statusCodeValue: HTTPStatusCode? {
+    var statusCodeValue: HTTPStatusCode? {
         return HTTPStatusCode(HTTPResponse: self)
     }
     
@@ -103,7 +103,7 @@ public extension HTTPURLResponse {
      */
     @available(iOS, introduced: 7.0)
     @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
-    public convenience init?(url: URL, statusCode: HTTPStatusCode, httpVersion: String?, headerFields: [String : String]?) {
+    convenience init?(url: URL, statusCode: HTTPStatusCode, httpVersion: String?, headerFields: [String : String]?) {
         self.init(url: url, statusCode: statusCode.rawValue, httpVersion: httpVersion, headerFields: headerFields)
     }
 }
@@ -168,7 +168,7 @@ public extension HTTPURLResponse {
     /// - deprecated: Renamed to `init(url:statusCode:httpVersion:headerFields)` to correct Swift 3 naming convention.
     @available(*, deprecated, renamed: "init(url:statusCode:httpVersion:headerFields:)", message: "Renamed to correct Swift 3 naming convention")
     @nonobjc
-    public convenience init?(url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
+    convenience init?(url: URL, statusCode: HTTPStatusCode, HTTPVersion: String?, headerFields: [String : String]?) {
         self.init(url: url, statusCode: statusCode, httpVersion: HTTPVersion, headerFields: headerFields)
     }
 }

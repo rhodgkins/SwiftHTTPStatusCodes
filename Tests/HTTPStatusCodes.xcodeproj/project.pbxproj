@@ -203,23 +203,26 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Rich H";
 				TargetAttributes = {
 					440D14111A99DD1D00EEB60B = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 1020;
 					};
 					440D141C1A99DD1D00EEB60B = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 440D140C1A99DD1D00EEB60B /* Build configuration list for PBXProject "HTTPStatusCodes" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 440D14081A99DD1D00EEB60B;
 			productRefGroup = 440D14131A99DD1D00EEB60B /* Products */;
@@ -287,6 +290,7 @@
 			baseConfigurationReference = 446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -343,6 +347,7 @@
 			baseConfigurationReference = 446C8CDC1BA73F0B00FFB0E3 /* HTTPStatusCodes.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -399,6 +404,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -414,6 +420,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -429,6 +436,7 @@
 				OTHER_SWIFT_FLAGS = "-DDEBUG";
 				PRODUCT_NAME = HTTPStatusCodesTests;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -442,6 +450,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=watch*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = HTTPStatusCodesTests;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

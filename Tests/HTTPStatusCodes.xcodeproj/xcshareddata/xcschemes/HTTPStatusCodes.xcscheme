@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -11,7 +11,7 @@
             buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "YES"
-            buildForAnalyzing = "NO">
+            buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
@@ -94,15 +94,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "440D14111A99DD1D00EEB60B"
-            BuildableName = "HTTPStatusCodes.framework"
-            BlueprintName = "HTTPStatusCodes"
-            ReferencedContainer = "container:HTTPStatusCodes.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

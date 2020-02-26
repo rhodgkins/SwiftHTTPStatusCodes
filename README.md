@@ -18,10 +18,19 @@ If this library is out of date compared to this page please open an issue and I 
 
 ### Swift versions support
 
+* Swift 5.1 - use version 3.3.2
 * Swift 5 - use version 3.3.1
 * Swift 4 - use version 3.3.0
 * Swift 3 - use version 3.1
 * Older versions - use version 3.0
+
+### Swift Package Manager
+
+Add this package to the dependencies in your `Package.swift` file:
+
+```swift
+.package(url: "https://github.com/rhodgkins/SwiftHTTPStatusCodes.git", .upToNextMajor(from: "3.0.0"))
+```
 
 ### Carthage
 

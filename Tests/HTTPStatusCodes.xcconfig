@@ -18,11 +18,6 @@ COMBINE_HIDPI_IMAGES                    = YES
 
 SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator
 
-VALID_ARCHS[sdk=iphone*]                = arm64 armv7 armv7s
-VALID_ARCHS[sdk=appletv*]               = arm64
-VALID_ARCHS[sdk=macosx*]                = i386 x86_64
-VALID_ARCHS[sdk=watch*]                 = armv7k
-
 SWIFT_VERSION = 5.0
 
 LD_RUNPATH_SEARCH_PATHS[sdk=iphone*]    = $(inherited) @executable_path/Frameworks @loader_path/Frameworks
@@ -39,7 +34,7 @@ INFOPLIST_FILE[sdk=watch*]              = $(PROJECT_NAME)/SupportingFiles/Info-w
 
 // iOS
 CODE_SIGN_IDENTITY[sdk=iphoneos*]       = iPhone Developer
-IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 8.0
+IPHONEOS_DEPLOYMENT_TARGET[sdk=iphone*] = 9.0
 TARGETED_DEVICE_FAMILY[sdk=iphone*]     = 1,2
 
 // tvOS

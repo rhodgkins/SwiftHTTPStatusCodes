@@ -3,7 +3,6 @@ public struct Case {
     let name: String
     let comments: [String]
     let caseName: String
-    let objCCaseName: String?
     
     init(code: Int, name: String, comments: String...) {
         self.init(code: code, name: name, comments: comments)
@@ -23,8 +22,6 @@ public struct Case {
         let swiftCaseNameSuffix = (identifiers.count > 1 ? identifiers.suffix(from: 1).map { $0.uppercasedFirstCharacter() } : []).joined(separator: "")
         
         let swiftCaseName = swiftCaseNamePrefix + swiftCaseNameSuffix
-        // Keep acronyms if its the first identifier
-        objCCaseName = prefix.uppercased() == prefix ? (prefix + swiftCaseNameSuffix) : nil
         
         // Escape special case names
         caseName = UnsafeCaseNames.contains(swiftCaseName) ? "`\(swiftCaseName)`" : swiftCaseName
@@ -36,9 +33,6 @@ extension Case: Hashable, Comparable, CustomStringConvertible {
     
     public var description: String {
         var lines = [makeLinesIntoDocComment(lines: comments, prefix: "\t")]
-        if let objCCaseName = objCCaseName {
-            lines.append("\t@objc(\(EnumName)\(objCCaseName))")
-        }
         lines.append("\tcase \(caseName) = \(code)")
         return text(lines)
     }

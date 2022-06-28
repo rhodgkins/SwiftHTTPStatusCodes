@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 #if os(watchOS)
 // No testing supported
 @testable import HTTPStatusCodes
@@ -107,7 +111,7 @@ final class RegressionTests: XCTestCase {
         XCTAssertEqual(HTTPStatusCode.notExtended, 510)
         XCTAssertEqual(HTTPStatusCode.networkAuthenticationRequired, 511)
         
-        XCTAssertEqual(HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: .ok, HTTPVersion: nil, headerFields: nil)!.statusCodeValue, .ok)
+       XCTAssertEqual(HTTPURLResponse(url: URL(string: "http://www.google.com")!, statusCode: .ok, httpVersion: nil, headerFields: nil)!.statusCodeValue, .ok)
     }
     
     func testVersion3_0() {

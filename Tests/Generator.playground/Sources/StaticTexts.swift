@@ -68,7 +68,7 @@ public func createEnumHeaderComment(lastUpdated: String) -> String {
     )
 }
 
-public let EnumDeclarationStart = "@objc public enum \(EnumName): Int {"
+public let EnumDeclarationStart = "public enum \(EnumName): Int {"
 
 public let EnumDeclarationEnd = "}"
 

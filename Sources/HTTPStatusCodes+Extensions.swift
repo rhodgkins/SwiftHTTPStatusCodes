@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 public extension HTTPStatusCode {
     /// Informational - Request received, continuing process.
     var isInformational: Bool {
@@ -82,7 +86,7 @@ public extension HTTPURLResponse {
      *
      * - returns: the receiver’s HTTP status code.
      */
-    @objc(statusCodeValue) var statusCodeEnum: HTTPStatusCode {
+    var statusCodeEnum: HTTPStatusCode {
         return HTTPStatusCode(HTTPResponse: self)!
     }
     
@@ -102,7 +106,6 @@ public extension HTTPURLResponse {
      * - returns: the instance of the object, or `nil` if an error occurred during initialization.
      */
     @available(iOS, introduced: 7.0)
-    @objc(initWithURL:statusCodeValue:HTTPVersion:headerFields:)
     convenience init?(url: URL, statusCode: HTTPStatusCode, httpVersion: String?, headerFields: [String : String]?) {
         self.init(url: url, statusCode: statusCode.rawValue, httpVersion: httpVersion, headerFields: headerFields)
     }

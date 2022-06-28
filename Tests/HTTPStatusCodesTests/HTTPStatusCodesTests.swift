@@ -8,6 +8,10 @@
 
 import Foundation
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 #if os(watchOS)
 // No testing supported
 @testable import HTTPStatusCodes

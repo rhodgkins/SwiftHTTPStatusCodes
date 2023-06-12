@@ -29,6 +29,10 @@ public extension HTTPStatusCode {
     var isServerError: Bool {
         return isIn(range: 500...599)
     }
+    /// Cloudflare Error - a dedicated Cloudflare status code was returned.
+    var isCloudflareError: Bool {
+        return isIn(range: 520...526)
+    }
     
     /// - returns: `true` if the status code is in the provided range, false otherwise.
     private func isIn(range: ClosedRange<HTTPStatusCode.RawValue>) -> Bool {

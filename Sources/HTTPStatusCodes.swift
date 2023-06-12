@@ -406,6 +406,55 @@ import Foundation
     /// 
     /// - seealso: [RFC6585](http://www.iana.org/go/rfc6585)
     case networkAuthenticationRequired = 511
+
+    /// Web Server Returned Unknown Error: 520
+    ///
+    /// The origin server returned an empty, unknown, or unexpected response to Cloudflare.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case webServerReturnedUnknownError = 520
+
+    /// Web Server Is Down: 521
+    ///
+    /// The origin server refused connections from Cloudflare. Security solutions at the origin may be blocking legitimate connections from certain Cloudflare IP addresses.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case webServerIsDown = 521
+
+    /// Connection Timed Out: 522
+    ///
+    /// Cloudflare timed out contacting the origin server.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case connectionTimedOut = 522
+
+    /// Origin Is Unreachable: 523
+    ///
+    /// Cloudflare could not reach the origin server; for example, if the DNS records for the origin server are incorrect or missing.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case originIsUnreacahable = 523
+
+    /// A Timeout Occurred: 524
+    ///
+    /// Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case timeoutOccurred = 524
+
+    /// SSL Handshake Failed: 525
+    ///
+    /// Cloudflare could not negotiate a SSL/TLS handshake with the origin server.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case sslHandshakeFailed = 525
+
+    /// Invalid SSL Certificate: 526
+    ///
+    /// Cloudflare could not validate the SSL certificate on the origin web server. Also used by Cloud Foundry's gorouter.
+    ///
+    /// - seealso: [Cloudflare Help](https://developers.cloudflare.com/support/troubleshooting/cloudflare-errors/troubleshooting-cloudflare-5xx-errors/)
+    case invalidSSLCertificate = 526
     
     /// Site is frozen: 530
     /// 
